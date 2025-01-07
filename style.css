@@ -142,6 +142,16 @@ main p{
   h2, p { margin-top: 1em }
 }
 
+.container1{
+  background-color: rgba(255, 217, 0, 0.575);
+  border: 5px solid rgb(255, 187, 0);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2, p { margin-top: 1em }
+}
+
 @media(max-width: 800px){
   body{
     grid-template-columns: 1fr;
