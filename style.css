@@ -142,7 +142,7 @@ main p{
   h2, p { margin-top: 1em }
 }
 
-.container1{
+.warning-container{
   background-color: rgba(255, 217, 0, 0.575);
   border: 5px solid rgb(255, 187, 0);
   border-radius: 1em;
@@ -152,17 +152,40 @@ main p{
   h2, p { margin-top: 1em}
 }
 
-.container1 h2{
+.warning-container h2{
   color: #000000;
 }
 
 
-.container1 p{
+.warning-container p{
   color: #000000;
 }
 
+.container-wrapper {
+  display: flex;
+  gap: 20px; /* Adjust spacing between the containers */
+}
 
-@media(max-width: 800px){
+.container.img {
+  flex: 1; /* Allow the image container to take up available space */
+}
+
+.container {
+  flex: 2; /* Give more space to text containers */
+}
+
+
+
+.container img {
+  width: 100%; /* Ensures the image covers the container */
+  height: auto; /* Ensures the image covers the container */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  display: block; /* Removes any inline spacing issues */
+  border-radius: 10px;
+  border-color: var(--accent-clr)
+}
+
+@media(max-width: 810px){
   body{
     grid-template-columns: 1fr;
   }
@@ -172,7 +195,15 @@ main p{
   .container{
     border: none;
     padding: 0;
+    float: none; /* Remove floating */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove extra margins */
   }
+
+  .container-wrapper{
+    display:inline;
+  }
+
   #sidebar{
     height: 60px;
     width: 100%;
