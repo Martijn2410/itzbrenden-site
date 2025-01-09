@@ -174,8 +174,6 @@ main p{
   flex: 2; /* Give more space to text containers */
 }
 
-
-
 .container img {
   width: 100%; /* Ensures the image covers the container */
   height: auto; /* Ensures the image covers the container */
@@ -183,6 +181,42 @@ main p{
   display: block; /* Removes any inline spacing issues */
   border-radius: 10px;
   border-color: var(--accent-clr)
+}
+
+details{
+  background-color: var(--hover-clr);
+  color: var(--secondary-text-clr);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;  
+  transition: height 1s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after{
+  content: "\002B";
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+  content: "\00D7";
+}
+
+details[open] div{
+  padding: .5em 1em;
 }
 
 @media(max-width: 810px){
@@ -202,6 +236,14 @@ main p{
 
   .container-wrapper{
     display:inline;
+  }
+
+  .item1{
+    order: 2;
+  }
+
+  .item2{
+    order: 1;
   }
 
   #sidebar{
