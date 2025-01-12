@@ -29,3 +29,26 @@ function closeAllSubMenus(){
     ul.previousElementSibling.classList.remove('rotate')
   })
 }
+
+// Function to handle resizing and apply the required classes
+function handleResize() {
+  const viewportWidth = window.innerWidth;
+
+  if (viewportWidth <= 1080 && !sidebar.classList.contains('close')) {
+    sidebar.classList.add('close');
+  }
+
+  if (viewportWidth < 811 && sidebar.classList.contains('close')) {
+    sidebar.classList.remove('close');
+  }
+
+  if (viewportWidth >= 1081 && sidebar.classList.contains('close')) {
+    sidebar.classList.remove('close');
+  }
+}
+
+// Attach resize event listener
+window.addEventListener('resize', handleResize);
+
+// Call the function initially to set the correct state on page load
+handleResize();

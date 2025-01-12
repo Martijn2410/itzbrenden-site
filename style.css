@@ -37,6 +37,7 @@ body{
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
+  z-index: 10;
 }
 #sidebar.close{
   padding: 5px;
@@ -161,6 +162,10 @@ main p{
   color: #000000;
 }
 
+.warning-container li{
+  color: #000000;
+}
+
 .container-wrapper {
   display: flex;
   gap: 20px; /* Adjust spacing between the containers */
@@ -262,6 +267,7 @@ details[open] div{
     padding: 0;
     float: none; /* Remove floating */
     width: 100%; /* Full width */
+    height: auto;
     margin: 0; /* Remove extra margins */
   }
 
