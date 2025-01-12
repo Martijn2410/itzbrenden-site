@@ -183,6 +183,22 @@ main p{
   border-color: var(--accent-clr)
 }
 
+.banner-container {
+  width: 100%; /* Full width */
+  height: 150px; /* Adjust the height to your desired banner size */
+  position: relative;
+  overflow: hidden;
+  border-radius: 1em;
+  margin-bottom: 20px;
+}
+
+.banner-container img {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  display: block; /* Prevents inline spacing issues */
+}
+
 details{
   background-color: var(--hover-clr);
   color: var(--secondary-text-clr);
