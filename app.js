@@ -34,7 +34,7 @@ function closeAllSubMenus(){
 function handleResize() {
   const viewportWidth = window.innerWidth;
 
-  if (viewportWidth <= 1270 && !sidebar.classList.contains('close')) {
+  if (viewportWidth <= 1280 && !sidebar.classList.contains('close')) {
     sidebar.classList.add('close');
   }
 
@@ -42,7 +42,7 @@ function handleResize() {
     sidebar.classList.remove('close');
   }
 
-  if (viewportWidth >= 1271 && sidebar.classList.contains('close')) {
+  if (viewportWidth >= 1281 && sidebar.classList.contains('close')) {
     sidebar.classList.remove('close');
   }
 }
