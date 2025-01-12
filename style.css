@@ -145,7 +145,7 @@ main p{
 .warning-container{
   background-color: rgba(255, 217, 0, 0.575);
   border: 5px solid rgb(255, 187, 0);
-  border-radius: 1em;
+  border-radius: 1rem;
   margin-bottom: 20px;
   padding: min(3em, 15%);
 
@@ -174,13 +174,20 @@ main p{
   flex: 2; /* Give more space to text containers */
 }
 
-.container img {
-  width: 100%; /* Ensures the image covers the container */
-  height: auto; /* Ensures the image covers the container */
+.img-container {
+  width: 30%; /* Adjust width as needed */
+  position: relative;
+  overflow: hidden; /* Ensures any overflow is clipped */
+  border-radius: 1rem; /* Ensures the border radius applies to the container */
+  margin-bottom: 20px;
+}
+
+.img-container img {
+  width: 100%; /* Ensures the image spans the full width of the container */
+  height: 100%; /* Ensures the image spans the full height of the container */
   object-fit: cover; /* Ensures the image fills the container without distortion */
-  display: block; /* Removes any inline spacing issues */
-  border-radius: 10px;
-  border-color: var(--accent-clr)
+  display: block; /* Removes inline spacing issues */
+  border-radius: inherit; /* Matches the container's border-radius */
 }
 
 .banner-container {
@@ -203,7 +210,7 @@ details{
   background-color: var(--hover-clr);
   color: var(--secondary-text-clr);
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 summary {
@@ -243,6 +250,14 @@ details[open] div{
     padding: 2em 1em 60px 1em;
   }
   .container{
+    border: none;
+    padding: 0;
+    float: none; /* Remove floating */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove extra margins */
+  }
+
+  .img-container{
     border: none;
     padding: 0;
     float: none; /* Remove floating */
