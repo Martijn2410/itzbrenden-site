@@ -173,6 +173,7 @@ main p{
 .socialButtons{
   color: inherit; /* Inherit text color from the parent */
   text-decoration: none; /* Removes underlining */
+  margin-bottom: 20px;
 }
 
 .warning-container{
