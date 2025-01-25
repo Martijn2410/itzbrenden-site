@@ -148,7 +148,7 @@ main p{
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   margin-bottom: 20px;
-  padding: min(3em, 15%);
+  padding: 1rem;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -170,6 +170,10 @@ main p{
   transform: scale(1.1); 
 }
 
+.socialButtons{
+  color: inherit; /* Inherit text color from the parent */
+  text-decoration: none; /* Removes underlining */
+}
 
 .warning-container{
   background-color: rgba(255, 217, 0, 0.575);
@@ -202,7 +206,6 @@ main p{
 .center-container-wrapper {
   display: flex;
   gap: 20px; /* Adjust spacing between the containers */
-
   justify-content: center; /* Centers the containers horizontally */
   align-items: center; /* Centers the containers vertically */
 }
@@ -309,9 +312,9 @@ details[open] div{
   }
 
   .center-container {
-    border: none; /* Remove the container border */
-    border-radius: 0; /* Reset border radius */
-    padding: 0; /* Remove padding */
+    border: 1; /* Remove the container border */
+    border-radius: 50rem; /* Reset border radius */
+    padding: 5px; /* Remove padding */
     margin: 0; /* Remove margin */
     /* gap: 10px; */
   }
