@@ -4,7 +4,7 @@
   --line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #e6e6ef;
-  --accent-clr: #5e63ff;
+  --accent-clr: #7478ff;
   --secondary-text-clr: #b0b3c1;
 }
 *{
@@ -139,9 +139,37 @@ main p{
   border-radius: 1em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
+  align-items: center;
 
   h2, p { margin-top: 1em }
 }
+
+.center-container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h2, p { 
+    margin-top: 1em; 
+  }
+  a {
+    color: inherit; /* Inherit text color from the parent */
+    text-decoration: none; /* Removes underlining */
+    
+  }
+}
+
+.center-container:hover{
+  transform: scale(1.1); 
+}
+
 
 .warning-container{
   background-color: rgba(255, 217, 0, 0.575);
@@ -170,6 +198,15 @@ main p{
   display: flex;
   gap: 20px; /* Adjust spacing between the containers */
 }
+
+.center-container-wrapper {
+  display: flex;
+  gap: 20px; /* Adjust spacing between the containers */
+
+  justify-content: center; /* Centers the containers horizontally */
+  align-items: center; /* Centers the containers vertically */
+}
+
 
 .container.img {
   flex: 1; /* Allow the image container to take up available space */
@@ -269,6 +306,34 @@ details[open] div{
     width: 100%; /* Full width */
     height: auto;
     margin: 0; /* Remove extra margins */
+  }
+
+  .center-container {
+    border: none; /* Remove the container border */
+    border-radius: 0; /* Reset border radius */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    /* gap: 10px; */
+  }
+
+  .center-container button {
+    display: inline-block; /* Ensure buttons are inline elements */
+    margin: 0; /* Remove any extra margin */
+  }
+
+  .center-container {
+    display: flex; /* Use flexbox to align buttons */
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    /* gap: 100px; Add spacing between buttons */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .center-container-wrapper{
+    gap: 100;
   }
 
   .container-wrapper{
