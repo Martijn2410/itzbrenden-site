@@ -62,6 +62,14 @@ body{
   }
 }
 
+.active1{
+  color: var(--accent-clr);
+  
+  svg{
+    fill: var(--accent-clr);
+  }
+}
+
 #sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
   border-radius: .5em;
   padding: .85em;
@@ -168,7 +176,8 @@ main p{
 }
 
 .center-container:hover{
-  transform: scale(1.1); 
+  transform: scale(1.1);
+  transition: 0.25s ease;
 }
 
 .socialButtons{
@@ -237,6 +246,16 @@ main p{
   border-radius: inherit; /* Matches the container's border-radius */
 }
 
+.story-image-outline {
+  border: 5px solid rgba(124, 124, 124, 0);
+}
+
+.story-image-outline:hover {
+  transform: scale(1.05);
+  border: 5px solid rgba(255, 255, 255, 0.603);
+  transition: 0.25s ease;
+}
+
 .banner-container {
   width: 100%; /* Full width */
   height: 150px; /* Adjust the height to your desired banner size */
@@ -251,6 +270,10 @@ main p{
   height: 100%; /* Full height of the container */
   object-fit: cover; /* Ensures the image fills the container without distortion */
   display: block; /* Prevents inline spacing issues */
+}
+
+.banner-outline {
+  border: 5px solid rgba(124, 124, 124, 0.603);
 }
 
 details{
@@ -311,6 +334,8 @@ details[open] div{
     width: 100%; /* Full width */
     height: auto;
     margin: 0; /* Remove extra margins */
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .center-container {
@@ -362,6 +387,17 @@ details[open] div{
   .element-remover{
     display: none;
   }
+
+  .center-container:hover{
+    transform: scale(1.0);
+    transition: 0.25s ease;
+  }
+
+  .story-image-outline:hover {
+    transform: none;
+    border: none;
+  }
+  
 
   #sidebar{
     height: 60px;

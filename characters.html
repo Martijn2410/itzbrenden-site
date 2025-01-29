@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <script type="text/javascript" src="app.js" defer></script>
+</head>
+
+<body>
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo"><a target="_blank" href="https://www.itzbrenden.art">ItzBrenden.art</a></span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home-circle bx-sm'></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="profile.html">
+          <i class='bx bx-user bx-sm' ></i>
+          <span>About me</span>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.artstation.com/itzbrenden">
+          <i class='bx bx-photo-album bx-sm' ></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li class="active1">
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <i class='bx bxs-archive bx-sm active1'></i>
+          <span class="active1">OC Content</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+          </svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="stories.html">Stories</a></li>
+            <li class="active"><a href="characters.html">Characters</a></li>
+            <li><a href="extras.html">Extras</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/messages/compose?recipient_id=1000018939039092741">
+          <i class='bx bx-chat bx-sm' ></i>
+          <span>Contact me!</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="warning-container">
+        <h2>WARNING</h2>
+        <p>The characters page is still in development. Some info might be missing. Check back later to see what has been added!</p>
+    </div>
+  </main>
+</body>
+</html>
