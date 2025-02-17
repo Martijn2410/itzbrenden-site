@@ -30,25 +30,25 @@ function closeAllSubMenus(){
   })
 }
 
-// Function to handle resizing and apply the required classes
-function handleResize() {
-  const viewportWidth = window.innerWidth;
+// // Function to handle resizing and apply the required classes
+// function handleResize() {
+//   const viewportWidth = window.innerWidth;
 
-  if (viewportWidth <= 1280 && !sidebar.classList.contains('close')) {
-    sidebar.classList.add('close');
-  }
+//   if (viewportWidth <= 1280 && !sidebar.classList.contains('close')) {
+//     sidebar.classList.add('close');
+//   }
 
-  if (viewportWidth < 811 && sidebar.classList.contains('close')) {
-    sidebar.classList.remove('close');
-  }
+//   if (viewportWidth < 811 && sidebar.classList.contains('close')) {
+//     sidebar.classList.remove('close');
+//   }
 
-  if (viewportWidth >= 1281 && sidebar.classList.contains('close')) {
-    sidebar.classList.remove('close');
-  }
-}
+//   if (viewportWidth >= 1281 && sidebar.classList.contains('close')) {
+//     sidebar.classList.remove('close');
+//   }
+// }
 
-// Attach resize event listener
-window.addEventListener('resize', handleResize);
+// // Attach resize event listener
+// window.addEventListener('resize', handleResize);
 
-// Call the function initially to set the correct state on page load
-handleResize();
+// // Call the function initially to set the correct state on page load
+// handleResize();
