@@ -1,6 +1,26 @@
 const toggleButton = document.getElementById('toggle-btn');
 const sidebar = document.getElementById('sidebar');
 
+// Function to handle sidebar state based on screen width
+function handleResponsiveSidebar() {
+  const width = window.innerWidth;
+
+  if (width < 811) {
+    sidebar.classList.remove('close');
+    toggleButton.classList.remove('rotate');
+    localStorage.setItem('sidebarClosed', 'false');
+  } else if (width < 1281) {
+    sidebar.classList.add('close');
+    toggleButton.classList.add('rotate');
+    localStorage.setItem('sidebarClosed', 'true');
+  } else {
+    // Restore user's last preference if above 1281px
+    const isClosed = localStorage.getItem('sidebarClosed') === 'true';
+    sidebar.classList.toggle('close', isClosed);
+    toggleButton.classList.toggle('rotate', isClosed);
+  }
+}
+
 // Disable animations initially if sidebar is closed
 if (localStorage.getItem('sidebarClosed') === 'true') {
   sidebar.classList.add('close', 'no-transition');
@@ -11,6 +31,12 @@ if (localStorage.getItem('sidebarClosed') === 'true') {
 setTimeout(() => {
   sidebar.classList.remove('no-transition');
 }, 100);
+
+// Apply responsive sidebar logic on load
+handleResponsiveSidebar();
+
+// Listen for window resize and adjust sidebar state accordingly
+window.addEventListener('resize', handleResponsiveSidebar);
 
 function toggleSidebar() {
   sidebar.classList.toggle('close');
@@ -45,28 +71,3 @@ function closeAllSubMenus() {
     ul.previousElementSibling.classList.remove('rotate');
   });
 }
-
-
-
-// // Function to handle resizing and apply the required classes
-// function handleResize() {
-//   const viewportWidth = window.innerWidth;
-
-//   if (viewportWidth <= 1280 && !sidebar.classList.contains('close')) {
-//     sidebar.classList.add('close');
-//   }
-
-//   if (viewportWidth < 811 && sidebar.classList.contains('close')) {
-//     sidebar.classList.remove('close');
-//   }
-
-//   if (viewportWidth >= 1281 && sidebar.classList.contains('close')) {
-//     sidebar.classList.remove('close');
-//   }
-// }
-
-// // Attach resize event listener
-// window.addEventListener('resize', handleResize);
-
-// Call the function initially to set the correct state on page load
-handleResize();
