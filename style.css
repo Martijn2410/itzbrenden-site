@@ -312,6 +312,11 @@ details[open] div{
   padding: .5em 1em;
 }
 
+.no-transition {
+  transition: none !important;
+}
+
+
 @media(max-width: 810px){
   body{
     grid-template-columns: 1fr;
