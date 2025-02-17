@@ -1,34 +1,46 @@
-const toggleButton = document.getElementById('toggle-btn')
-const sidebar = document.getElementById('sidebar')
+const toggleButton = document.getElementById('toggle-btn');
+const sidebar = document.getElementById('sidebar');
 
-function toggleSidebar(){
-  sidebar.classList.toggle('close')
-  toggleButton.classList.toggle('rotate')
-
-  closeAllSubMenus()
+// Check localStorage for sidebar state on page load
+if (localStorage.getItem('sidebarClosed') === 'true') {
+  sidebar.classList.add('close');
+  toggleButton.classList.add('rotate');
 }
 
-function toggleSubMenu(button){
+function toggleSidebar() {
+  sidebar.classList.toggle('close');
+  toggleButton.classList.toggle('rotate');
 
-  if(!button.nextElementSibling.classList.contains('show')){
-    closeAllSubMenus()
+  // Save the state in localStorage
+  localStorage.setItem('sidebarClosed', sidebar.classList.contains('close'));
+
+  closeAllSubMenus();
+}
+
+function toggleSubMenu(button) {
+  if (!button.nextElementSibling.classList.contains('show')) {
+    closeAllSubMenus();
   }
 
-  button.nextElementSibling.classList.toggle('show')
-  button.classList.toggle('rotate')
+  button.nextElementSibling.classList.toggle('show');
+  button.classList.toggle('rotate');
 
-  if(sidebar.classList.contains('close')){
-    sidebar.classList.toggle('close')
-    toggleButton.classList.toggle('rotate')
+  if (sidebar.classList.contains('close')) {
+    sidebar.classList.toggle('close');
+    toggleButton.classList.toggle('rotate');
+
+    // Update localStorage since sidebar state changed
+    localStorage.setItem('sidebarClosed', sidebar.classList.contains('close'));
   }
 }
 
-function closeAllSubMenus(){
+function closeAllSubMenus() {
   Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    ul.classList.remove('show')
-    ul.previousElementSibling.classList.remove('rotate')
-  })
+    ul.classList.remove('show');
+    ul.previousElementSibling.classList.remove('rotate');
+  });
 }
+
 
 // // Function to handle resizing and apply the required classes
 // function handleResize() {
