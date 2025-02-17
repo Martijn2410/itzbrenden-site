@@ -1,11 +1,16 @@
 const toggleButton = document.getElementById('toggle-btn');
 const sidebar = document.getElementById('sidebar');
 
-// Check localStorage for sidebar state on page load
+// Disable animations initially if sidebar is closed
 if (localStorage.getItem('sidebarClosed') === 'true') {
-  sidebar.classList.add('close');
+  sidebar.classList.add('close', 'no-transition');
   toggleButton.classList.add('rotate');
 }
+
+// Remove 'no-transition' after a slight delay to avoid animation on load
+setTimeout(() => {
+  sidebar.classList.remove('no-transition');
+}, 100);
 
 function toggleSidebar() {
   sidebar.classList.toggle('close');
@@ -40,6 +45,7 @@ function closeAllSubMenus() {
     ul.previousElementSibling.classList.remove('rotate');
   });
 }
+
 
 
 // // Function to handle resizing and apply the required classes
