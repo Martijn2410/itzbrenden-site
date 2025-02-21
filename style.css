@@ -252,7 +252,7 @@ main p{
 
 .story-image-outline:hover {
   transform: scale(1.05);
-  border: 5px solid rgba(255, 255, 255, 0.603);
+  border: 5px solid rgb(255, 255, 255);
   transition: 0.25s ease;
 }
 
@@ -387,7 +387,9 @@ details[open] div{
     color: inherit; /* Inherit text color from the parent */
     text-decoration: none; /* Removes underlining */
     margin-top: 30px;
+    size: 1rem;
   }
+
 
   .element-remover{
     display: none;
