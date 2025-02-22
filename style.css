@@ -316,6 +316,41 @@ details[open] div{
   transition: none !important;
 }
 
+.element-remover-big{
+  display: none;
+}
+
+.element-remover-big1{
+  display: none;
+}
+
+.skill{
+  width: 50px;
+  margin: 60px auto;
+  color: #fff;
+  padding: 20px;
+}
+
+.skill li{
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.skill-bar{
+  background: #353b48;
+  display: block;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.skill-bar span{
+  height:20px;
+  float: left;
+  background: linear-gradient(135deg, rgba(236,0,140, 1)0%, rgba(252,103,0,1.0))
+}
 
 @media(max-width: 810px){
   body{
@@ -390,9 +425,17 @@ details[open] div{
     size: 1rem;
   }
 
-
   .element-remover{
     display: none;
+  }
+
+  .element-remover-big{
+    display:unset;
+    /* text-align: center; */
+  }
+
+  .element-remover-big1{
+    display: flex;
   }
 
   .center-container:hover{
@@ -405,7 +448,6 @@ details[open] div{
     border: none;
   }
   
-
   #sidebar{
     height: 60px;
     width: 100%;
