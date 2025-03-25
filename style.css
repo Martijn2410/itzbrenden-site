@@ -221,6 +221,11 @@ main p{
   align-items: center; /* Centers the containers vertically */
 }
 
+.art-title{
+  text-decoration: underline;
+  color: inherit; /* Inherit text color from the parent */
+}
+
 
 .container.img {
   flex: 1; /* Allow the image container to take up available space */
@@ -239,6 +244,22 @@ main p{
 }
 
 .img-container img {
+  width: 100%; /* Ensures the image spans the full width of the container */
+  height: 100%; /* Ensures the image spans the full height of the container */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  display: block; /* Removes inline spacing issues */
+  border-radius: inherit; /* Matches the container's border-radius */
+}
+
+.img-container1 {
+  width: 50%; /* Adjust width as needed */
+  position: relative;
+  overflow: hidden; /* Ensures any overflow is clipped */
+  border-radius: 1rem; /* Ensures the border radius applies to the container */
+  margin-bottom: 20px;
+}
+
+.img-container1 img {
   width: 100%; /* Ensures the image spans the full width of the container */
   height: 100%; /* Ensures the image spans the full height of the container */
   object-fit: cover; /* Ensures the image fills the container without distortion */
@@ -368,6 +389,17 @@ details[open] div{
   }
 
   .img-container{
+    border: none;
+    padding: 0;
+    float: none; /* Remove floating */
+    width: 100%; /* Full width */
+    height: auto;
+    margin: 0; /* Remove extra margins */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img-container1{
     border: none;
     padding: 0;
     float: none; /* Remove floating */
