@@ -373,6 +373,43 @@ details[open] div{
   background: linear-gradient(135deg, rgba(236,0,140, 1)0%, rgba(252,103,0,1.0))
 }
 
+.list {
+  columns: 600px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden; /* Ensures text stays within the image bounds */
+  border-radius: 0.5em; /* Matches the image's border-radius */
+}
+
+.img-test {
+  width: 100%;
+  display: block;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3); /* lower opacity for blur effect */
+  padding: 10px 14px;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(6px); /* 🎯 This is the blur effect */
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
+}
+
 @media(max-width: 810px){
   body{
     grid-template-columns: 1fr;
