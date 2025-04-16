@@ -390,7 +390,7 @@ details[open] div{
 }
 
 .list1 {
-  columns: 529px;
+  columns: 750px;
 }
 
 .image-container {
@@ -437,13 +437,13 @@ details[open] div{
 }
 
 .image-container:hover {
-  z-index: 10; /* Bring to front */
+  z-index: 9; /* Bring to front */
   
 }
 
 .image-container:hover {
   transform: scale(1.03);
-  z-index: 10;
+  z-index: 9;
 
   /* 🎯 Glowing outline around the image */
   box-shadow:
@@ -451,6 +451,34 @@ details[open] div{
     0 12px 24px rgba(0, 0, 0, 0.3);     /* soft drop shadow */
 
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.image-button{
+  /* content: attr(data-label); */
+  position: absolute;
+  top: 0;
+  left: 100%;
+  translate: -105% 1110%;
+  background-color: #ffdd0035;
+  border: 1px solid #ffdd00;
+  color: #ffdd00;
+  padding: .1em 4em;
+  border-radius: 1rem;
+
+  backdrop-filter: blur(50px); /* 🎯 This is the blur effect */
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
+}
+
+@media screen and (min-width: 2560px) {
+  .list1 {
+    columns: 1000px; /* Adjust this value to what looks good on 1440p */
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .list1 {
+    columns: 2500px; /* Adjust this value to what looks good on 1440p */
+  }
 }
 
 @media(max-width: 810px){
