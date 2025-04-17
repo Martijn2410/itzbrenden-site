@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
+  --base-clr: #f8f9ff;
+  --nav-clr: #c7caf5;
+  --nav-popup-clr:#d4d6f1;
+  --container-clr:#dbdff7;
+  --line-clr: #bec1e0;
+  --hover-clr: #7f8abd8f;
+  --text-clr: #000000;
+  --accent-clr: #383b9b;
+  --secondary-text-clr: #000000;
+  --btn-bg: #c6c9ff;
+  --btn-hover-bg:#7f8abd8f;
+}
+.darkmode{
   --base-clr: #191a24;
   --nav-clr: #11121a;
+  --nav-popup-clr:#11121a;
   --container-clr:#1b1c29;
   --line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #e6e6ef;
   --accent-clr: #7478ff;
   --secondary-text-clr: #b0b3c1;
+  --btn-bg: #505177;
+  --btn-hover-bg:#c9d2fa8f;
 }
 *{
   margin: 0;
@@ -44,6 +60,9 @@ body{
   text-wrap: nowrap;
   z-index: 10;
 }
+#sidebar .logo a {
+  font-weight: bold;
+}
 #sidebar.close{
   padding: 5px;
   width: 60px;
@@ -61,6 +80,7 @@ body{
 }
 #sidebar ul li.active a{
   color: var(--accent-clr);
+  font-weight: bold;
 
   svg{
     fill: var(--accent-clr);
@@ -101,6 +121,7 @@ body{
 }
 #sidebar a:hover, #sidebar .dropdown-btn:hover{
   background-color: var(--hover-clr);
+  border-radius: 1.5rem;
 }
 #sidebar .sub-menu{
   display: grid;
@@ -150,7 +171,7 @@ main p{
 }
 .container{
   border: 1px solid var(--line-clr);
-  border-radius: 1em;
+  border-radius: 1.5em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
   align-items: center;
@@ -159,44 +180,41 @@ main p{
   h2, p { margin-top: 1em }
 }
 
-.center-container {
-  border: 1px solid var(--line-clr);
-  border-radius: 50em;
-  margin-top: 90%;
-  margin-bottom: 20px;
-  padding: 1rem;
-  text-decoration: none;
+.center-container-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  /* 👇 Set default size here or override per-button */
+  --btn-width: 300px;
+  --btn-height: 100px;
+}
+
+.social-button {
+  width: var(--btn-width);
+  height: var(--btn-height);
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  h2, p { 
-    margin-top: 1em; 
-  }
-  a {
-    color: inherit; /* Inherit text color from the parent */
-    text-decoration: none; /* Removes underlining */
-    
-  }
+  background-color: var(--btn-bg, #ffffff); /* fallback background */
+  border: 1px solid var(--line-clr);
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  /* box-shadow: 0 10px 8px #0000009a; */
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.center-container:hover{
-  transform: scale(1.1);
-  transition: 0.25s ease;
-}
-
-.socialButtons{
-  color: inherit; /* Inherit text color from the parent */
-  text-decoration: none; /* Removes underlining */
-  margin-bottom: 20px;
+.social-button:hover {
+  background-color: var(--btn-hover-bg, var(--hover-clr));
+  transform: scale(1.05);
 }
 
 .warning-container{
   background-color: rgba(255, 217, 0, 0.575);
   border: 5px solid rgb(255, 187, 0);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   margin-bottom: 20px;
   padding: min(3em, 15%);
 
@@ -221,13 +239,6 @@ main p{
   gap: 20px; /* Adjust spacing between the containers */
 }
 
-.center-container-wrapper {
-  display: flex;
-  gap: 20px; /* Adjust spacing between the containers */
-  justify-content: center; /* Centers the containers horizontally */
-  align-items: center; /* Centers the containers vertically */
-}
-
 .art-title{
   text-decoration: underline;
   color: inherit; /* Inherit text color from the parent */
@@ -246,7 +257,7 @@ main p{
   width: 30%; /* Adjust width as needed */
   position: relative;
   overflow: hidden; /* Ensures any overflow is clipped */
-  border-radius: 1rem; /* Ensures the border radius applies to the container */
+  border-radius: 1.5rem; /* Ensures the border radius applies to the container */
   margin-bottom: 20px;
   box-shadow: 0 10px 8px #0000009a;
 }
@@ -294,7 +305,7 @@ main p{
   height: 150px; /* Adjust the height to your desired banner size */
   position: relative;
   overflow: hidden;
-  border-radius: 1em;
+  border-radius: 1.5em;
   margin-bottom: 20px;
 }
 
@@ -469,6 +480,58 @@ details[open] div{
   -webkit-backdrop-filter: blur(6px); /* for Safari */
 }
 
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--btn-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* top: 20px;
+  right: 20px; */
+}
+
+#theme-switch svg{
+  fill: var(--accent-clr)
+}
+
+#theme-switch svg:last-child{
+display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+@media screen and (max-width: 1080px) {
+  .center-container-wrapper {
+    --btn-width: 100px;
+    --btn-height: 50px;
+
+  }
+
+  .social-button{
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .center-container-wrapper {
+    --btn-width: 150px;
+    --btn-height: 50px;
+
+  }
+
+  .social-button{
+    border-radius: 1.5rem;
+  }
+}
+
 @media screen and (min-width: 2560px) {
   .list1 {
     columns: 1000px; /* Adjust this value to what looks good on 1440p */
@@ -481,7 +544,7 @@ details[open] div{
   }
 }
 
-@media(max-width: 810px){
+@media(max-width: 910px){
   body{
     grid-template-columns: 1fr;
   }
@@ -545,8 +608,15 @@ details[open] div{
     margin-bottom: 5%;
   }
 
-  .center-container-wrapper{
-    gap: 100;
+  .center-container-wrapper {
+    --btn-width: 50px;
+    --btn-height: 50px;
+
+  }
+
+  .social-button{
+    border-radius: 1rem;
+    box-shadow: none;
   }
 
   .container-wrapper{
@@ -559,13 +629,6 @@ details[open] div{
 
   .item2{
     order: 1;
-  }
-
-  .socialButtons{
-    color: inherit; /* Inherit text color from the parent */
-    text-decoration: none; /* Removes underlining */
-    margin-top: 30px;
-    size: 1rem;
   }
 
   .element-remover{
@@ -635,7 +698,7 @@ details[open] div{
       height: 60px;
       width: 100%;
       border-radius: 1.5rem;
-      background-color: var(--hover-clr);
+      background-color: var(--nav-popup-clr);
       border-top: 1px solid var(--line-clr);
       display: flex;
       justify-content: center;

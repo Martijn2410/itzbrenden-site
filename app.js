@@ -5,7 +5,7 @@ const sidebar = document.getElementById('sidebar');
 function handleResponsiveSidebar() {
   const width = window.innerWidth;
 
-  if (width < 811) {
+  if (width < 911) {
     sidebar.classList.remove('close');
     toggleButton.classList.remove('rotate');
     localStorage.setItem('sidebarClosed', 'false');
