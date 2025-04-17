@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --base-clr: #191a24;
+  --nav-clr: #11121a;
+  --nav-popup-clr:#11121a;
+  --container-clr:#1b1c29;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #7478ff;
+  --secondary-text-clr: #b0b3c1;
+  --btn-bg: #505177;
+  --btn-hover-bg:#c9d2fa8f;
+}
 
 .lightmode{
   --base-clr: #f8f9ff;
