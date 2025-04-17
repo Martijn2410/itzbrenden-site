@@ -1,8 +1,18 @@
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
+// Detect if the browser is Firefox or Firefox-based
+function isFirefoxBased() {
+    return typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox');
+}
+
 // This runs before anything else to apply the saved theme
 function applyTheme(theme) {
     document.body.classList.remove('lightmode', 'darkmode');
+
+    if (isFirefoxBased()) {
+        document.body.classList.add('darkmode'); // Force dark mode for Firefox
+        return;
+    }
 
     if (theme === 'dark') {
         document.body.classList.add('darkmode');
@@ -44,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Listen for system theme change (live response)
 prefersDarkScheme.addEventListener('change', () => {
-    if (getStoredTheme() === 'system') {
+    if (getStoredTheme() === 'system' && !isFirefoxBased()) {
         applyTheme('system');
     }
 });
