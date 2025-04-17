@@ -482,7 +482,7 @@ details[open] div{
   -webkit-backdrop-filter: blur(6px); /* for Safari */
 }
 
-#theme-switch{
+#theme-switch {
   height: 50px;
   width: 50px;
   padding: 0;
@@ -492,22 +492,68 @@ details[open] div{
   justify-content: center;
   align-items: center;
   position: fixed;
-  /* top: 20px;
-  right: 20px; */
 }
 
-#theme-switch svg{
-  fill: var(--accent-clr)
+#theme-switch svg {
+  fill: var(--accent-clr);
 }
 
-#theme-switch svg:last-child{
-display: none;
-}
-.darkmode #theme-switch svg:first-child{
+#theme-switch svg:last-child {
   display: none;
 }
-.darkmode #theme-switch svg:last-child{
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
   display: block;
+}
+
+.settings-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: var(--container-clr);
+  border: 1px solid var(--line-clr);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 8px #0000009a;
+  flex-wrap: wrap; /* Responsive fallback */
+}
+
+.settings-section .text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.settings-section .controls {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.settings-section label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.settings-section select,
+.settings-section input[type="checkbox"],
+.settings-section button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--line-clr);
+  background-color: var(--btn-bg);
+  color: var(--text-clr);
+}
+
+#theme-select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 @media screen and (max-width: 1080px) {

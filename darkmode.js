@@ -1,19 +1,43 @@
-let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('theme-switch')
+const themeSelect = document.getElementById('theme-select');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
+function applyTheme(theme) {
+    document.body.classList.remove('lightmode', 'darkmode');
+
+    if (theme === 'dark') {
+        document.body.classList.add('darkmode');
+    } else if (theme === 'light') {
+        document.body.classList.add('lightmode');
+    } else if (prefersDarkScheme.matches) {
+        document.body.classList.add('darkmode');
+    }
 }
 
-const disableDarkmode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
+function getStoredTheme() {
+    return localStorage.getItem('theme') || 'system';
 }
 
-if(darkmode === "active") enableDarkmode()
+function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
+}
 
-themeSwitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode')
-    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-})
+// On page load
+document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = getStoredTheme();
+    themeSelect.value = currentTheme;
+    applyTheme(currentTheme);
+});
+
+// On system change (live response)
+prefersDarkScheme.addEventListener('change', () => {
+    if (getStoredTheme() === 'system') {
+        applyTheme('system');
+    }
+});
+
+// On select change
+themeSelect.addEventListener('change', (e) => {
+    const selected = e.target.value;
+    setTheme(selected);
+});
