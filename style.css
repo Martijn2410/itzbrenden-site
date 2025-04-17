@@ -12,6 +12,21 @@
   --btn-bg: #c6c9ff;
   --btn-hover-bg:#7f8abd8f;
 }
+
+.lightmode{
+  --base-clr: #f8f9ff;
+  --nav-clr: #c7caf5;
+  --nav-popup-clr:#d4d6f1;
+  --container-clr:#dbdff7;
+  --line-clr: #bec1e0;
+  --hover-clr: #7f8abd8f;
+  --text-clr: #000000;
+  --accent-clr: #383b9b;
+  --secondary-text-clr: #000000;
+  --btn-bg: #c6c9ff;
+  --btn-hover-bg:#7f8abd8f;
+}
+
 .darkmode{
   --base-clr: #191a24;
   --nav-clr: #11121a;
@@ -25,6 +40,7 @@
   --btn-bg: #505177;
   --btn-hover-bg:#c9d2fa8f;
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -55,7 +71,7 @@ body{
   position: sticky;
   top: 0;
   align-self: start;
-  transition: 300ms ease-in-out;
+  /* transition: 300ms ease-in-out; */
   overflow: hidden;
   text-wrap: nowrap;
   z-index: 10;
@@ -592,9 +608,13 @@ details[open] div{
   }
 }
 
+
+
+
 @media(max-width: 910px){
   body{
     grid-template-columns: 1fr;
+    transition: none;
   }
   main{
     padding: 2em 1em 60px 1em;
@@ -665,6 +685,8 @@ details[open] div{
   .social-button{
     border-radius: 1rem;
     box-shadow: none;
+    background-color: var(--btn-bg, #ffffff); /* fallback background */
+    transition: none;
   }
 
   .container-wrapper{
@@ -711,6 +733,7 @@ details[open] div{
     position: fixed;
     top: unset;
     bottom: 0;
+    transition: none;
 
     border-top-left-radius: 1.5rem;
     border-bottom-right-radius: 0rem;
@@ -723,6 +746,7 @@ details[open] div{
       align-items: center;
       overflow-x: scroll;
       justify-content: center;
+      transition: none;
     }
     ul li{
       height: 100%;
