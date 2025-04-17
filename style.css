@@ -307,6 +307,8 @@ main p{
   overflow: hidden;
   border-radius: 1.5em;
   margin-bottom: 20px;
+  box-shadow: 0 10px 8px #0000009a;
+
 }
 
 .banner-container img {
