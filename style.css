@@ -41,7 +41,7 @@
   --btn-hover-bg:#c9d2fa8f;
 }
 
-.force-dark-mode body {
+.force-dark-mode {
   --base-clr: #191a24;
   --nav-clr: #11121a;
   --nav-popup-clr:#11121a;
