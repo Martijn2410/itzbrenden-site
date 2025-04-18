@@ -85,7 +85,7 @@ body{
   position: sticky;
   top: 0;
   align-self: start;
-  transition: 300ms ease-in-out;
+  /* transition: 300ms ease-in-out; */
   overflow: hidden;
   text-wrap: nowrap;
   z-index: 10;
@@ -233,7 +233,6 @@ main p{
   text-decoration: none;
   color: inherit;
   /* box-shadow: 0 10px 8px #0000009a; */
-  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .social-button:hover {
