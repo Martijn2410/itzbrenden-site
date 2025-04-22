@@ -5,9 +5,11 @@
   --nav-popup-clr:#11121a;
   --container-clr:#1b1c29;
   --line-clr: #42434a;
+  --img-line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #e6e6ef;
   --accent-clr: #7478ff;
+  --story-select-clr: #fff;
   --secondary-text-clr: #b0b3c1;
   --btn-bg: #505177;
   --btn-hover-bg:#c9d2fa8f;
@@ -19,9 +21,11 @@
   --nav-popup-clr:#d4d6f1;
   --container-clr:#dbdff7;
   --line-clr: #bec1e0;
+  --img-line-clr: #42434a;
   --hover-clr: #7f8abd8f;
   --text-clr: #000000;
   --accent-clr: #383b9b;
+  --story-select-clr: #fff;
   --secondary-text-clr: #000000;
   --btn-bg: #c6c9ff;
   --btn-hover-bg:#7f8abd8f;
@@ -33,9 +37,11 @@
   --nav-popup-clr:#11121a;
   --container-clr:#1b1c29;
   --line-clr: #42434a;
+  --img-line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #e6e6ef;
   --accent-clr: #7478ff;
+  --story-select-clr: #fff;
   --secondary-text-clr: #b0b3c1;
   --btn-bg: #505177;
   --btn-hover-bg:#c9d2fa8f;
@@ -47,9 +53,11 @@
   --nav-popup-clr:#11121a;
   --container-clr:#1b1c29;
   --line-clr: #42434a;
+  --img-line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #e6e6ef;
   --accent-clr: #7478ff;
+  --story-select-clr: #fff;
   --secondary-text-clr: #b0b3c1;
   --btn-bg: #505177;
   --btn-hover-bg:#c9d2fa8f;
@@ -475,7 +483,7 @@ details[open] div{
   backdrop-filter: blur(50px); /* 🎯 This is the blur effect */
   -webkit-backdrop-filter: blur(6px); /* for Safari */
 
-  border-top: 1px solid var(--line-clr);
+  border-top: 1px solid var(--img-line-clr);
 }
 
 .image-container:hover {
@@ -492,7 +500,7 @@ details[open] div{
     0 0 0 4px var(--accent-clr), /* white outline */
     0 12px 24px rgba(0, 0, 0, 0.3);     /* soft drop shadow */
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  /* transition: transform 0.15s ease, box-shadow 0.15s ease; */
 }
 
 .image-button{
