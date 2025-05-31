@@ -179,8 +179,8 @@ main p{
   right: 1rem;
   gap: 1rem;
   padding: 1rem;
-  --btn-width: 100px;
-  --btn-height: 100px;
+  --btn-width: 50px;
+  --btn-height: 50px;
   z-index: 5;
 }
 
@@ -190,9 +190,11 @@ main p{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--btn-bg, #ffffff); fallback background */
+  /* background-color: var(--btn-bg, #ffffff);  */
+    backdrop-filter: blur(50px); /* 🎯 This is the blur effect */
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
   border: 1px solid var(--line-clr);
-  border-radius: 1.5rem;
+  border-radius: .75rem;
   text-decoration: none;
   color: inherit;
   /* box-shadow: 0 10px 8px #0000009a; */
@@ -548,30 +550,6 @@ details[open] div{
   border: 1px solid #ccc;
 }
 
-@media screen and (max-width: 1080px) {
-  /* .center-container-wrapper {
-    --btn-width: 100px;
-    --btn-height: 50px;
-
-  } */
-
-  .social-button{
-    border-radius: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 1580px) {
-  /* .center-container-wrapper {
-    --btn-width: 150px;
-    --btn-height: 50px;
-
-  } */
-
-  .social-button{
-    border-radius: 1.5rem;
-  }
-}
-
 @media screen and (min-width: 2560px) {
   .list1 {
     columns: 1000px; /* Adjust this value to what looks good on 1440p */
@@ -583,9 +561,6 @@ details[open] div{
     columns: 2500px; /* Adjust this value to what looks good on 1440p */
   }
 }
-
-
-
 
 @media(max-width: 910px){
   body{
