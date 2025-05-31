@@ -164,6 +164,7 @@ main p{
   border-radius: 1.5em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
+  position: relative;
   align-items: center;
   box-shadow: 0 10px 8px #0000009a;
   background-color: var(--container-clr);
@@ -171,13 +172,15 @@ main p{
 }
 
 .center-container-wrapper {
+  position:absolute;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
+  bottom: 1rem;
+  left: 1rem;
   gap: 1rem;
   padding: 1rem;
-  /* 👇 Set default size here or override per-button */
-  --btn-width: 300px;
+  --btn-width: 100px;
   --btn-height: 100px;
 }
 
@@ -187,7 +190,7 @@ main p{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--btn-bg, #ffffff); /* fallback background */
+  /* background-color: var(--btn-bg, #ffffff); fallback background */
   border: 1px solid var(--line-clr);
   border-radius: 1.5rem;
   text-decoration: none;
@@ -546,11 +549,11 @@ details[open] div{
 }
 
 @media screen and (max-width: 1080px) {
-  .center-container-wrapper {
+  /* .center-container-wrapper {
     --btn-width: 100px;
     --btn-height: 50px;
 
-  }
+  } */
 
   .social-button{
     border-radius: 1.5rem;
@@ -558,11 +561,11 @@ details[open] div{
 }
 
 @media screen and (max-width: 1580px) {
-  .center-container-wrapper {
+  /* .center-container-wrapper {
     --btn-width: 150px;
     --btn-height: 50px;
 
-  }
+  } */
 
   .social-button{
     border-radius: 1.5rem;
@@ -600,6 +603,10 @@ details[open] div{
     margin: 0; /* Remove extra margins */
     box-shadow: none;
     background-color: var(--base-clr);
+  }
+
+  .center{
+text-align: center;
   }
 
   .img-container{
@@ -652,11 +659,15 @@ details[open] div{
   .center-container-wrapper {
     --btn-width: 50px;
     --btn-height: 50px;
-
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
   }
 
   .social-button{
-    border-radius: 1rem;
+    border-radius: 5rem;
     box-shadow: none;
     background-color: var(--btn-bg, #ffffff); /* fallback background */
     transition: none;
