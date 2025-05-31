@@ -172,16 +172,16 @@ main p{
 }
 
 .center-container-wrapper {
-  position:absolute;
+  position:fixed;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   bottom: 1rem;
-  left: 1rem;
+  right: 1rem;
   gap: 1rem;
   padding: 1rem;
   --btn-width: 100px;
   --btn-height: 100px;
+  z-index: 5;
 }
 
 .social-button {
