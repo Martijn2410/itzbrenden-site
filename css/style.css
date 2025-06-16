@@ -190,13 +190,11 @@ main p{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--btn-bg, #ffffff);  */
-    backdrop-filter: blur(50px); /* 🎯 This is the blur effect */
-  -webkit-backdrop-filter: blur(6px); /* for Safari */
+  background-color: rgba(124, 124, 124, 1);
   border: 1px solid var(--line-clr);
-  border-radius: .75rem;
+  border-radius: 5rem;
   text-decoration: none;
-  color: inherit;
+  color: #eeeeee;
   /* box-shadow: 0 10px 8px #0000009a; */
 }
 
@@ -400,6 +398,11 @@ details[open] div{
   columns: 750px;
 }
 
+.list2 {
+  columns: 100px;
+
+}
+
 .image-container {
   position: relative;
   width: 100%;
@@ -428,6 +431,7 @@ details[open] div{
   bottom: 0;
   left: 0;
   width: 100%;
+  text-align: left;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -554,6 +558,9 @@ details[open] div{
   .list1 {
     columns: 1000px; /* Adjust this value to what looks good on 1440p */
   }
+    .list2 {
+    columns: 550px; /* Adjust this value to what looks good on 1440p */
+  }
 }
 
 @media screen and (min-width: 3840px) {
@@ -643,8 +650,8 @@ text-align: center;
 
   .social-button{
     border-radius: 5rem;
+    border: none;
     box-shadow: none;
-    background-color: var(--btn-bg, #ffffff); /* fallback background */
     transition: none;
   }
 
