@@ -447,21 +447,16 @@ details[open] div{
   border-top: 1px solid var(--img-line-clr);
 }
 
-.image-container:hover {
-  z-index: 9; /* Bring to front */
-  
+.image-container:hover img {
+  transform: scale(1.1);
+  z-index: 1;
 }
 
+/* Optional glow on hover */
 .image-container:hover {
-  transform: scale(1.03);
-  z-index: 9;
-
-  /* 🎯 Glowing outline around the image */
   box-shadow:
-    0 0 0 4px var(--accent-clr), /* white outline */
-    0 12px 24px rgba(0, 0, 0, 0.3);     /* soft drop shadow */
-
-  /* transition: transform 0.15s ease, box-shadow 0.15s ease; */
+    0 0 0 4px var(--accent-clr),
+    0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .image-button{
@@ -653,6 +648,7 @@ text-align: center;
     border: none;
     box-shadow: none;
     transition: none;
+    background-color: rgba(124, 124, 124, 0);
   }
 
   .container-wrapper{
