@@ -1,11 +1,10 @@
 .lightmode{
-    --base-clr: #f8f9ff;
-    --nav-clr: #c7caf5;
-    --nav-popup-clr:#d4d6f1;
-    --container-clr:#dbdff7;
+    --base-clr: #ffffff;
+    --nav-clr: #f0f4f9;
+    --container-clr:#f0f4f9;
     --line-clr: #bec1e0;
     --img-line-clr: #42434a;
-    --hover-clr: #7f8abd8f;
+    --hover-clr: #a9b3e08f;
     --text-clr: #000000;
     --accent-clr: #383b9b;
     --story-select-clr: #fff;
@@ -15,13 +14,12 @@
   }
   
   .darkmode{
-    --base-clr: #191a24;
-    --nav-clr: #11121a;
-    --nav-popup-clr:rgb(255, 0, 0);
-    --container-clr:#1b1c29;
+    --base-clr: #131314;
+    --nav-clr: #1e1f20;
+    --container-clr:#1e1f20;
     --line-clr: #42434a;
     --img-line-clr: #42434a;
-    --hover-clr: #222533;
+    --hover-clr: #282d3d;
     --text-clr: #e6e6ef;
     --accent-clr: #7478ff;
     --story-select-clr: #fff;
@@ -33,7 +31,6 @@
   .force-dark-mode {
     --base-clr: #191a24;
     --nav-clr: #11121a;
-    --nav-popup-clr:#11121a;
     --container-clr:#1b1c29;
     --line-clr: #42434a;
     --img-line-clr: #42434a;
