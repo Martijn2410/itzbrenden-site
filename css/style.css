@@ -32,10 +32,8 @@ body {
   color: var(--text-clr);
   display: grid;
   grid-template-columns: auto 1fr;
-  /* This might need adjustment if you remove sidebar entirely */
 }
 
-/* Removed #sidebar and all its direct child selectors */
 
 main {
   padding: min(30px, 7%);
@@ -85,7 +83,6 @@ main p {
   justify-content: space-between;
   align-items: center;
   background-color: var(--container-clr, #2c2f33);
-  /* fallback dark gray */
   padding: 1.5em 2em;
   border-radius: 1.5em;
   border: 1px solid var(--line-clr, #202225);
@@ -103,24 +100,20 @@ main p {
 
 .container-sub .icon-container {
   background-color: #5865F2;
-  /* Discord blurple */
   border-radius: 0.75em;
   width: 400px;
-  /* or whatever size you want */
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 1.5em;
   overflow: hidden;
-  /* ensures the image respects border-radius */
 }
 
 .container-sub .icon-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensure it fills without distortion */
   display: block;
 }
 
@@ -151,7 +144,6 @@ main p {
   border-radius: 5rem;
   text-decoration: none;
   color: #eeeeee;
-  /* box-shadow: 0 10px 8px #0000009a; */
 }
 
 .social-button:hover {
@@ -187,45 +179,35 @@ main p {
 .container-wrapper {
   display: flex;
   gap: 20px;
-  /* Adjust spacing between the containers */
 }
 
 .art-title {
   text-decoration: underline;
   color: inherit;
-  /* Inherit text color from the parent */
 }
 
 .container.img {
   flex: 1;
-  /* Allow the image container to take up available space */
 }
 
 .container {
   flex: 2;
-  /* Give more space to text containers */
 }
 
 .img-container {
   width: 30%;
-  /* Adjust width as needed */
   position: relative;
   overflow: hidden;
-  /* Ensures any overflow is clipped */
   border-radius: 1.5rem;
-  /* Ensures the border radius applies to the container */
   margin-bottom: 20px;
   box-shadow: 0 10px 8px #0000009a;
 }
 
 .img-container-main {
   width: 20%;
-  /* Adjust width as needed */
   position: relative;
   overflow: hidden;
-  /* Ensures any overflow is clipped */
   border-radius: 1.5rem;
-  /* Ensures the border radius applies to the container */
   margin-bottom: 20px;
   margin-left: 10rem;
   box-shadow: 0 10px 8px #0000009a;
@@ -234,52 +216,34 @@ main p {
 
 .img-container-main img {
   width: 100%;
-  /* Ensures the image spans the full width of the container */
   height: 100%;
-  /* Ensures the image spans the full height of the container */
   object-fit: cover;
-  /* Ensures the image fills the container without distortion */
   display: block;
-  /* Removes inline spacing issues */
   border-radius: inherit;
-  /* Matches the container's border-radius */
 }
 
 .img-container img {
   width: 100%;
-  /* Ensures the image spans the full width of the container */
   height: 100%;
-  /* Ensures the image spans the full height of the container */
   object-fit: cover;
-  /* Ensures the image fills the container without distortion */
   display: block;
-  /* Removes inline spacing issues */
   border-radius: inherit;
-  /* Matches the container's border-radius */
 }
 
 .img-container1 {
   width: 50%;
-  /* Adjust width as needed */
   position: relative;
   overflow: hidden;
-  /* Ensures any overflow is clipped */
   border-radius: 1rem;
-  /* Ensures the border radius applies to the container */
   margin-bottom: 20px;
 }
 
 .img-container1 img {
   width: 100%;
-  /* Ensures the image spans the full width of the container */
   height: 100%;
-  /* Ensures the image spans the full height of the container */
   object-fit: cover;
-  /* Ensures the image fills the container without distortion */
   display: block;
-  /* Removes inline spacing issues */
   border-radius: inherit;
-  /* Matches the container's border-radius */
 }
 
 .story-image-outline {
@@ -307,13 +271,9 @@ main p {
 
 .banner-container img {
   width: 100%;
-  /* Full width of the container */
   height: 100%;
-  /* Full height of the container */
   object-fit: cover;
-  /* Ensures the image fills the container without distortion */
   display: block;
-  /* Prevents inline spacing issues */
 }
 
 .banner-outline {
@@ -414,9 +374,7 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  /* Ensures text stays within the image bounds */
   border-radius: 0.5em;
-  /* Matches the image's border-radius */
 }
 
 .image-containerNoEffect {
@@ -424,9 +382,7 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  /* Ensures text stays within the image bounds */
   border-radius: 0.5em;
-  /* Matches the image's border-radius */
   box-shadow: 0 10px 8px #0000009a;
 }
 
@@ -447,16 +403,13 @@ details[open] div {
   font-size: 20px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.3);
-  /* lower opacity for blur effect */
   padding: 10px 14px;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   box-sizing: border-box;
 
   backdrop-filter: blur(50px);
-  /* 🎯 This is the blur effect */
   -webkit-backdrop-filter: blur(6px);
-  /* for Safari */
 
   border-top: 1px solid var(--img-line-clr);
 }
@@ -474,7 +427,6 @@ details[open] div {
 }
 
 .image-button {
-  /* content: attr(data-label); */
   position: absolute;
   top: 0;
   left: 100%;
@@ -486,9 +438,7 @@ details[open] div {
   border-radius: 1rem;
 
   backdrop-filter: blur(50px);
-  /* 🎯 This is the blur effect */
   -webkit-backdrop-filter: blur(6px);
-  /* for Safari */
 }
 
 #theme-switch {
@@ -530,7 +480,6 @@ details[open] div {
   border-radius: 1.5rem;
   box-shadow: 0 10px 8px #0000009a;
   flex-wrap: wrap;
-  /* Responsive fallback */
 }
 
 .settings-section .text {
@@ -571,19 +520,48 @@ details[open] div {
 @media screen and (min-width: 2560px) {
   .list1 {
     columns: 1000px;
-    /* Adjust this value to what looks good on 1440p */
   }
 
   .list2 {
     columns: 550px;
-    /* Adjust this value to what looks good on 1440p */
   }
 }
 
 @media screen and (min-width: 3840px) {
   .list1 {
     columns: 2500px;
-    /* Adjust this value to what looks good on 1440p */
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .container-main {
+    margin-right: 5rem;
+  }
+
+  .container-sub {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .img-container-main {
+    width: 35%;
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container-main {
+    margin-right: 2rem;
+  }
+
+  .container-sub {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .img-container-main {
+    width: 45%;
+    margin-left: 2rem;
   }
 }
 
@@ -601,11 +579,8 @@ details[open] div {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     margin: 0;
-    /* Remove extra margins */
     box-shadow: none;
     background-color: var(--base-clr);
   }
@@ -614,24 +589,18 @@ details[open] div {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     margin: 0;
-    /* Remove extra margins */
     box-shadow: none;
     background-color: var(--base-clr);
   }
 
-    .container-sub {
+  .container-sub {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     margin: 0;
-    /* Remove extra margins */
     box-shadow: none;
     background-color: var(--base-clr);
   }
@@ -644,12 +613,9 @@ details[open] div {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     height: auto;
     margin: 0;
-    /* Remove extra margins */
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: none;
@@ -659,12 +625,9 @@ details[open] div {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     height: auto;
     margin: 0;
-    /* Remove extra margins */
     margin-top: 10px;
     margin-bottom: 20px;
     box-shadow: none;
@@ -674,45 +637,30 @@ details[open] div {
     border: none;
     padding: 0;
     float: none;
-    /* Remove floating */
     width: 100%;
-    /* Full width */
     height: auto;
     margin: 0;
-    /* Remove extra margins */
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .center-container {
     border: 1;
-    /* Remove the container border */
     border-radius: 50rem;
-    /* Reset border radius */
     padding: 5px;
-    /* Remove padding */
     margin: 0;
-    /* Remove margin */
-    /* gap: 10px; */
   }
 
   .center-container button {
     display: inline-block;
-    /* Ensure buttons are inline elements */
     margin: 0;
-    /* Remove any extra margin */
   }
 
   .center-container {
     display: flex;
-    /* Use flexbox to align buttons */
     flex-direction: row;
-    /* Align buttons horizontally */
     justify-content: center;
-    /* Center buttons horizontally */
     align-items: center;
-    /* Center buttons vertically */
-    /* gap: 100px; Add spacing between buttons */
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -754,7 +702,6 @@ details[open] div {
 
   .element-remover-big {
     display: unset;
-    /* text-align: center; */
   }
 
   .element-remover-big1 {
@@ -766,7 +713,7 @@ details[open] div {
     transition: 0.25s ease;
   }
 
-  .image-containerNoEffect{
+  .image-containerNoEffect {
     box-shadow: none;
   }
 
@@ -774,6 +721,4 @@ details[open] div {
     transform: none;
     border: none;
   }
-
-  /* Removed #sidebar media query rules */
 }
