@@ -11,6 +11,9 @@
     --secondary-text-clr: #000000;
     --btn-bg: #c6c9ff;
     --btn-hover-bg:#7f8abd8f;
+    --social-btn-bckgrnd: #31313169;
+    --social-btn-outline: #666666;
+    --social-btn-color: #000000;
   }
   
   .darkmode{
@@ -26,19 +29,7 @@
     --secondary-text-clr: #b0b3c1;
     --btn-bg: #505177;
     --btn-hover-bg:#c9d2fa8f;
-  }
-  
-  .force-dark-mode {
-    --base-clr: #191a24;
-    --nav-clr: #11121a;
-    --container-clr:#1b1c29;
-    --line-clr: #42434a;
-    --img-line-clr: #42434a;
-    --hover-clr: #222533;
-    --text-clr: #e6e6ef;
-    --accent-clr: #7478ff;
-    --story-select-clr: #fff;
-    --secondary-text-clr: #b0b3c1;
-    --btn-bg: #505177;
-    --btn-hover-bg:#c9d2fa8f;
+    --social-btn-bckgrnd: #afafaf69;
+    --social-btn-outline: #9c9c9c;
+    --social-btn-color: #ffffff;
   }

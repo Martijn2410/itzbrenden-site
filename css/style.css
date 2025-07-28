@@ -95,6 +95,7 @@ main p {
 
 .container-sub .text-content {
   flex: 1;
+  color: var(--text-clr)
 }
 
 
@@ -139,15 +140,16 @@ main p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(124, 124, 124, 1);
-  border: 1px solid var(--line-clr);
+  background-color: var(--social-btn-bckgrnd);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--social-btn-outline);
   border-radius: 5rem;
   text-decoration: none;
   color: #eeeeee;
 }
 
 .social-button:hover {
-  background-color: var(--btn-hover-bg, var(--hover-clr));
   transform: scale(1.05);
 }
 
@@ -682,6 +684,7 @@ details[open] div {
     box-shadow: none;
     transition: none;
     background-color: rgba(124, 124, 124, 0);
+    color: var(--social-btn-color)
   }
 
   .container-wrapper {
