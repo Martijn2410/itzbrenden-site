@@ -364,7 +364,7 @@ details[open] div {
 }
 
 .list1 {
-  columns: 550px;
+  columns: 750px;
 }
 
 .list2 {
@@ -550,6 +550,10 @@ details[open] div {
     width: 35%;
     margin-left: 5rem;
   }
+
+  .list1 {
+    columns: 550px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -565,6 +569,10 @@ details[open] div {
   .img-container-main {
     width: 45%;
     margin-left: 2rem;
+  }
+
+  .list1 {
+    columns: 500px;
   }
 }
 
