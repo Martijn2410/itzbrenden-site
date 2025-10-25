@@ -1,18 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --base-clr: #131314;
-  --nav-clr: #1e1f20;
-  --container-clr: #1e1f20;
-  --line-clr: #42434a;
-  --img-line-clr: #42434a;
-  --hover-clr: #282d3d;
-  --text-clr: #e6e6ef;
-  --accent-clr: #7478ff;
-  --story-select-clr: #fff;
-  --secondary-text-clr: #b0b3c1;
-  --btn-bg: #505177;
-  --btn-hover-bg: #c9d2fa8f;
+    --base-clr: #ffffff;
+    --nav-clr: #f0f4f965;
+    --container-clr:#ffffff;
+    --line-clr: #bec1e0;
+    --img-line-clr: #42434a;
+    --hover-clr: #a9b3e08f;
+    --text-clr: #000000;
+    --accent-clr: #383b9b;
+    --story-select-clr: #fff;
+    --secondary-text-clr: #000000;
+    --btn-bg: #c6c9ff;
+    --btn-hover-bg:#7f8abd8f;
+    --social-btn-bckgrnd: #31313169;
+    --social-btn-outline: #666666;
+    --social-btn-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-clr: #131314;
+    --nav-clr: #1e1f20;
+    --container-clr:#000000;
+    --line-clr: #42434a;
+    --img-line-clr: #42434a;
+    --hover-clr: #282d3d;
+    --text-clr: #e6e6ef;
+    --accent-clr: #7478ff;
+    --story-select-clr: #fff;
+    --secondary-text-clr: #b0b3c1;
+    --btn-bg: #505177;
+    --btn-hover-bg:#c9d2fa8f;
+    --social-btn-bckgrnd: #afafaf69;
+    --social-btn-outline: #9c9c9c;
+    --social-btn-color: #ffffff;
+}
 }
 
 * {
@@ -29,12 +52,46 @@ html {
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--base-clr);
-  color: var(--text-clr);
   display: grid;
   grid-template-columns: auto 1fr;
+  background: radial-gradient(circle at center, #627099, #000000); /* static gradient */
+  background-attachment: fixed; /* keeps it fixed while scrolling */
+  color: var(--text-clr);
+  position: relative;
+
 }
 
+/* Pulse overlay from bottom */
+body::before {
+  content: "";
+  position: fixed;
+  bottom: 0;                  /* anchor to bottom */
+  left: 50%;                  /* center horizontally */
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%) scale(1);
+  background: radial-gradient(circle at center bottom, #061258, transparent 100%);
+  animation: pulse 5s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;       /* allow scrolling and clicks */
+}
+
+/* @keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(2);
+    opacity: 1;
+  }
+} */
+
+/* Keep content above the pulse
+body > * {
+  position: relative;
+  z-index: 1;
+} */
 
 main {
   padding: min(30px, 7%);
@@ -46,6 +103,21 @@ main p {
   margin-bottom: 15px;
 }
 
+.theme-toggle button {
+  background: var(--btn-bg);
+  color: var(--text-clr);
+  border: 1px solid var(--line-clr);
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin: 0.25em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.theme-toggle button:hover {
+  background: var(--btn-hover-bg);
+}
+
 .container {
   border: 1px solid var(--line-clr);
   border-radius: 1.5em;
@@ -54,7 +126,9 @@ main p {
   position: relative;
   align-items: center;
   box-shadow: 0 10px 8px #0000009a;
-  background-color: var(--container-clr);
+  background-color: rgb(from var(--container-clr) r g b / 0.65);
+  backdrop-filter: blur(4px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
 
   h2,
   p {
@@ -71,7 +145,9 @@ main p {
   position: relative;
   align-items: center;
   box-shadow: 0 10px 8px #0000009a;
-  background-color: var(--container-clr);
+  background-color: rgb(from var(--container-clr) r g b / 0.65);
+  backdrop-filter: blur(4px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
 
   h2,
   p {
@@ -83,16 +159,19 @@ main p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--container-clr, #2c2f33);
+  background-color: rgb(from var(--container-clr) r g b / 0.65);
+  backdrop-filter: blur(4px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
   padding: 1.5em 2em;
   border-radius: 1.5em;
-  border: 1px solid var(--line-clr, #202225);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* subtle translucent border */
   margin-left: 10rem;
   margin-right: 10rem;
   margin-bottom: 20px;
   color: white;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5); /* softer shadow */
 }
+
 
 .container-sub .text-content {
   flex: 1;
@@ -123,17 +202,18 @@ main p {
 
 
 .center-container-wrapper {
-  position: fixed;
+  position: relative; /* or remove this line entirely */
   display: flex;
   flex-wrap: wrap;
-  bottom: 1rem;
-  right: 1rem;
+  justify-content: center; /* centers the content horizontally */
   gap: 1rem;
   padding: 1rem;
-  --btn-width: 50px;
-  --btn-height: 50px;
+  --btn-width: 75px;
+  --btn-height: 75px;
   z-index: 5;
+  margin: 2rem auto; /* centers the container itself */
 }
+
 
 .social-button {
   width: var(--btn-width);
@@ -141,9 +221,9 @@ main p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--social-btn-bckgrnd);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(6px);
+  background-color: rgb(from var(--container-clr) r g b / 0.65);
+  backdrop-filter: blur(1px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
   border: 1px solid var(--social-btn-outline);
   border-radius: 5rem;
   text-decoration: none;
@@ -478,7 +558,9 @@ details[open] div {
   align-items: center;
   padding: 2rem;
   gap: 2rem;
-  background-color: var(--container-clr);
+  background-color: rgb(from var(--container-clr) r g b / 0.65);
+  backdrop-filter: blur(4px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
   border: 1px solid var(--line-clr);
   border-radius: 1.5rem;
   box-shadow: 0 10px 8px #0000009a;
@@ -593,7 +675,7 @@ details[open] div {
     width: 100%;
     margin: 0;
     box-shadow: none;
-    background-color: var(--base-clr);
+    background-color: none;
   }
 
   .container-main {
@@ -603,7 +685,7 @@ details[open] div {
     width: 100%;
     margin: 0;
     box-shadow: none;
-    background-color: var(--base-clr);
+    background-color: #00000000;
   }
 
   .container-sub {
