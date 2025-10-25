@@ -675,7 +675,7 @@ details[open] div {
     width: 100%;
     margin: 0;
     box-shadow: none;
-    background-color: none;
+    background-color: #00000000;
   }
 
   .container-main {
@@ -695,7 +695,7 @@ details[open] div {
     width: 100%;
     margin: 0;
     box-shadow: none;
-    background-color: var(--base-clr);
+    background-color: #00000000;
   }
 
   .center {
