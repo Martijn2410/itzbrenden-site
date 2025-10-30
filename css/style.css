@@ -331,10 +331,6 @@ details[open] div {
   background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 0, 1.0))
 }
 
-.list {
-  columns: 500px;
-}
-
 .list2 {
   columns: 100px;
 
@@ -353,7 +349,7 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  border-radius: 0.5em;
+  border-radius: 1.5em;
   box-shadow: 0 10px 8px #0000009a;
 }
 
@@ -369,7 +365,7 @@ details[open] div {
   bottom: 0;
   left: 0;
   width: 100%;
-  text-align: left;
+  text-align: center;
   color: white;
   font-size: 20px;
   font-weight: bold;

@@ -4,8 +4,29 @@
     margin-right: 20rem;
 }
 
+.list-art {
+    columns: 4;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+@media screen and (max-width:1920px) {
+    .list-art {
+        columns: 2;
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+
+}
+
 @media screen and (max-width: 1600px) {
     .list-stories {
+        columns: 2;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .list-art {
         columns: 2;
         margin-left: 5rem;
         margin-right: 5rem;
@@ -14,6 +35,12 @@
 
 @media screen and (max-width: 910px) {
     .list-stories {
+        columns: 1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .list-art {
         columns: 1;
         margin-left: 1rem;
         margin-right: 1rem;
