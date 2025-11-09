@@ -3,7 +3,7 @@
 :root {
   --base-clr: #ffffff;
   --nav-clr: #f0f4f965;
-  --background-clr: #0c5509;
+  --background-clr: #a9a1e9;
   --container-clr: #ffffff;
   --line-clr: #000000;
   --img-line-clr: #42434a;
@@ -23,9 +23,9 @@
   :root {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
-    --background-clr: #120955;
+    --background-clr: #353a7e;
     --container-clr: #000000;
-    --line-clr: #50505066;
+    --line-clr: #494949;
     --img-line-clr: #42434a;
     --hover-clr: #282d3d;
     --text-clr: #e6e6ef;
@@ -57,9 +57,8 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: var(--background-clr);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23120955' cx='50' cy='0' r='50'/%3E%3Cg fill='%23140b5a' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23160d5f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23181064' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%231b1268' cx='50' cy='200' r='50'/%3E%3Cg fill='%231d156c' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23201870' cx='50' cy='300' r='50'/%3E%3Cg fill='%23231b74' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23261f78' cx='50' cy='400' r='50'/%3E%3Cg fill='%2329237b' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%232c267f' cx='50' cy='500' r='50'/%3E%3Cg fill='%23302a82' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23332e85' cx='50' cy='600' r='50'/%3E%3Cg fill='%23373387' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233b378a' cx='50' cy='700' r='50'/%3E%3Cg fill='%23403c8c' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2344418e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23494690' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%234e4c92' cx='50' cy='900' r='50'/%3E%3Cg fill='%23535194' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23585795' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
-
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23120955' cx='50' cy='0' r='50'/%3E%3Cg fill='%23140b5a' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23160d5f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23181064' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%231b1268' cx='50' cy='200' r='50'/%3E%3Cg fill='%231d156c' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23201870' cx='50' cy='300' r='50'/%3E%3Cg fill='%23231b74' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23261f78' cx='50' cy='400' r='50'/%3E%3Cg fill='%2329237b' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%232c267f' cx='50' cy='500' r='50'/%3E%3Cg fill='%23302a82' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23332e85' cx='50' cy='600' r='50'/%3E%3Cg fill='%23373387' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233b378a' cx='50' cy='700' r='50'/%3E%3Cg fill='%23403c8c' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2344418e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23494690' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%234e4c92' cx='50' cy='900' r='50'/%3E%3Cg fill='%23535194' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23585795' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
   color: var(--text-clr);
   position: relative;
 
@@ -83,7 +82,7 @@ main p {
   padding: min(3em, 15%);
   position: relative;
   align-items: center;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
   background-color: rgb(from var(--container-clr) r g b / 0.65);
   backdrop-filter: blur(4px);
   /* adds the blur effect */
@@ -126,7 +125,7 @@ main p {
   border-radius: 5rem;
   text-decoration: none;
   color: var(--social-btn-color);
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
 }
 
 .social-button:hover {
@@ -175,7 +174,7 @@ main p {
   overflow: hidden;
   border-radius: 1.5rem;
   margin-bottom: 20px;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
 }
 
 .img-container-main {
@@ -185,7 +184,7 @@ main p {
   border-radius: 1.5rem;
   margin-bottom: 20px;
   margin-left: 10rem;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
   border: 1px solid var(--line-clr);
 }
 
@@ -342,6 +341,9 @@ details[open] div {
   display: inline-block;
   overflow: hidden;
   border-radius: 1.5em;
+  border: 1px solid var(--line-clr);
+  box-shadow: 0 5px 8px #0000009a;
+  box-sizing: border-box;
 }
 
 .image-containerNoEffect {
@@ -349,15 +351,19 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
+  border: 1px solid var(--line-clr);
   border-radius: 1.5em;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
+  box-sizing: border-box;
 }
+
 
 .img-test {
   width: 100%;
   display: block;
   border-radius: 0.5em;
   margin-bottom: 1em;
+
 }
 
 .image-title {
@@ -389,8 +395,7 @@ details[open] div {
 /* Optional glow on hover */
 .image-container:hover {
   box-shadow:
-    0 0 0 4px var(--accent-clr),
-    0 12px 24px rgba(0, 0, 0, 0.3);
+    0 0 0 4px var(--accent-clr)
 }
 
 .image-button {
@@ -449,7 +454,7 @@ details[open] div {
   /* Safari support */
   border: 1px solid var(--line-clr);
   border-radius: 1.5rem;
-  box-shadow: 0 10px 8px #0000009a;
+  box-shadow: 0 5px 8px #0000009a;
   flex-wrap: wrap;
 }
 
@@ -506,7 +511,9 @@ details[open] div {
   body {
     grid-template-columns: 1fr;
     transition: none;
-    background-attachment: scroll;
+    background-attachment: fixed;
+     background-image: none;
+     background: var(--background-clr);
   }
 
   main {
@@ -625,10 +632,6 @@ details[open] div {
   .center-container:hover {
     transform: scale(1.0);
     transition: 0.25s ease;
-  }
-
-  .image-containerNoEffect {
-    box-shadow: none;
   }
 
   .story-image-outline:hover {

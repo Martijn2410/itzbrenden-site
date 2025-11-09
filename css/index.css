@@ -7,7 +7,7 @@
     padding: min(3em, 15%);
     position: relative;
     align-items: center;
-    box-shadow: 0 10px 8px #0000009a;
+    box-shadow: 0 5px 8px #0000009a;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -20,7 +20,7 @@
     padding: min(3em, 15%);
     position: relative;
     align-items: center;
-    box-shadow: 0 10px 8px #0000009a;
+    box-shadow: 0 5px 8px #0000009a;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -35,12 +35,12 @@
     -webkit-backdrop-filter: blur(4px);
     padding: 1rem 1rem;
     border-radius: 1.5em;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--line-clr);
     margin-left: 20rem;
     margin-right: 20rem;
     margin-bottom: 20px;
     color: white;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 8px #0000009a;
 }
 
 .container-upper .icon-container {
@@ -71,7 +71,7 @@
 .container-sub {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -82,7 +82,7 @@
     margin-right: 20rem;
     margin-bottom: 20px;
     color: white;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 8px #0000009a;
 }
 
 
@@ -99,7 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 1.5em;
+    margin-left: 2em;
     overflow: hidden;
 }
 
@@ -111,15 +111,17 @@
 }
 
 @media(max-width: 1600px) {
-    .container{
+    .container {
         margin-left: 5rem;
         margin-right: 5rem;
     }
-    .container-upper{
+
+    .container-upper {
         margin-left: 5rem;
         margin-right: 5rem;
     }
-        .container-sub{
+
+    .container-sub {
         margin-left: 5rem;
         margin-right: 5rem;
     }
@@ -131,8 +133,8 @@
         margin-right: 1rem;
         padding: 1.5em;
         border-radius: 1em;
-        box-shadow: 0 6px 6px #00000080;
-        text-align: center;
+        box-shadow: 0 5px 8px #0000009a;
+        text-align: left;
     }
 
     .container-upper {
@@ -156,12 +158,12 @@
         flex-direction: column;
         margin-left: 1rem;
         margin-right: 1rem;
-        text-align: center;
+        text-align: left;
     }
 
     .container-sub .icon-container {
         width: 100%;
         margin-left: 0;
-        margin-top: 1em;
+        margin-top: 0;
     }
 }
