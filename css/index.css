@@ -110,6 +110,15 @@
     display: block;
 }
 
+.container-sub.reverse {
+    flex-direction: row-reverse;
+}
+
+.container-sub.reverse .icon-container {
+    margin-left: 0;
+    margin-right: 2em;
+}
+
 @media(max-width: 1600px) {
     .container {
         margin-left: 5rem;
@@ -165,5 +174,14 @@
         width: 100%;
         margin-left: 0;
         margin-top: 0;
+    }
+
+    .container-sub.reverse {
+        flex-direction: none;
+    }
+
+    .container-sub.reverse .icon-container {
+        margin-left: none;
+        margin-right: none;
     }
 }
