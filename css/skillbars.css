@@ -1,0 +1,47 @@
+.skillbar {
+    background-color: var(--btn-bg);
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var( --text-clr);
+    font-weight: bold;
+
+    &::before {
+        content: attr(data-skill);
+        display: inline-block;
+        border-radius: inherit;
+         padding-left: 10px;
+    }
+
+    &.bad::before {
+        width: calc(20% - 10px);
+        background: var(--accent-clr)
+    }
+
+    &.ok::before {
+        width: calc(33% - 10px);
+        background: var(--accent-clr)
+    }
+
+    &.neutral::before {
+        width: calc(50% - 10px);
+        background: var(--accent-clr)
+    }
+
+    &.decent::before {
+        width: calc(60% - 1px);
+        background: var(--accent-clr)
+    }
+
+    &.great::before {
+        width: calc(80% - 10px);
+        background: var(--accent-clr)
+    }
+
+    &.expert::before {
+        width: calc(100% - 10px);
+        background: var(--accent-clr)
+    }
+    
+}
