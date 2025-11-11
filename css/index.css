@@ -9,8 +9,8 @@
     align-items: center;
     box-shadow: 0 5px 8px #0000009a;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .container-story {
@@ -22,8 +22,8 @@
     align-items: center;
     box-shadow: 0 5px 8px #0000009a;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .container-upper {
@@ -31,8 +31,8 @@
     justify-content: flex-start;
     align-items: center;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 1rem 1rem;
     border-radius: 1.5em;
     border: 1px solid var(--line-clr);
@@ -73,8 +73,8 @@
     justify-content: space-between;
     align-items: left;
     background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 1.5em 2em;
     border-radius: 1.5em;
     border: 1px solid var(--line-clr);

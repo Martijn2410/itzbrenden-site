@@ -7,9 +7,9 @@
   --container-clr: #ffffff;
   --line-clr: #000000;
   --img-line-clr: #42434a;
-  --hover-clr: #a9b3e08f;
+  --hover-clr: #9badfcbd;
   --text-clr: #000000;
-  --accent-clr: #383b9b;
+  --accent-clr: #2e3192;
   --story-select-clr: #fff;
   --secondary-text-clr: #000000;
   --btn-bg: #c6c9ff;
@@ -23,7 +23,7 @@
   :root {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
-    --background-clr: #353a7e;
+    --background-clr: #1e203f;
     --container-clr: #000000;
     --line-clr: #494949;
     --img-line-clr: #42434a;
@@ -56,13 +56,24 @@ body {
   min-height: 100dvh;
   display: grid;
   grid-template-columns: auto 1fr;
+  background-image: url("../img/background.webp");
   background-color: var(--background-clr);
-  
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  color: var(--text-clr);
-  position: relative;
+  background-size: cover;
+  background-position: center;
+}
 
+body::before {
+  content: "";
+  position: fixed; /* fixed makes it stay put while scrolling */
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  background-image: url("../img/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* adjust blur intensity here */
+  transform: scale(1.05); /* slightly zoom to hide edge blur artifacts */
+  z-index: -1; /* put it behind the content */
 }
 
 main {
@@ -96,6 +107,10 @@ main p {
   }
 }
 
+.container h3, .container-story, label{
+  color: var(--text-clr);
+}
+
 .center-container-wrapper {
   position: relative;
   /* or remove this line entirely */
@@ -120,8 +135,8 @@ main p {
   align-items: center;
   justify-content: center;
   background-color: rgb(from var(--container-clr) r g b / 0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--line-clr);
   border-radius: 5rem;
   text-decoration: none;
