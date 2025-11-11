@@ -368,6 +368,7 @@ details[open] div {
   display: inline-block;
   overflow: hidden;
   border: 1px solid var(--line-clr);
+  background-color: var(--accent-clr);
   border-radius: 1.5em;
   box-shadow: 0 5px 8px #0000009a;
   box-sizing: border-box;
