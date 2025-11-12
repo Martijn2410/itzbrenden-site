@@ -54,7 +54,7 @@ html {
 
 body {
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100lvh;
   display: grid;
   grid-template-columns: auto 1fr;
   background-image: url("../img/background.webp");
