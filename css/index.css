@@ -1,6 +1,6 @@
 .container {
     border: 1px solid var(--line-clr);
-    border-radius: 1.5em;
+    border-radius: 2.5em;
     margin-left: 20rem;
     margin-right: 20rem;
     margin-bottom: 20px;
@@ -34,7 +34,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1rem 1rem;
-    border-radius: 1.5em;
+    border-radius: 10rem;
     border: 1px solid var(--line-clr);
     margin-left: 20rem;
     margin-right: 20rem;
@@ -45,7 +45,7 @@
 
 .container-upper .icon-container {
     background-color: #5865F2;
-    border-radius: 0.75em;
+    border-radius: 10rem;
     width: 50px;
     height: 50px;
     display: flex;
@@ -76,7 +76,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1.5em 2em;
-    border-radius: 1.5em;
+    border-radius: 2.5rem;
     border: 1px solid var(--line-clr);
     margin-left: 20rem;
     margin-right: 20rem;
@@ -93,7 +93,7 @@
 
 .container-sub .icon-container {
     background-color: #5865F2;
-    border-radius: 0.75em;
+    border-radius: 2rem;
     width: 400px;
     height: auto;
     display: flex;
@@ -141,14 +141,13 @@
         margin-left: 1rem;
         margin-right: 1rem;
         padding: 1.5em;
-        border-radius: 1em;
         box-shadow: 0 5px 8px #0000009a;
         text-align: left;
     }
 
     .container-upper {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
         padding: .5em;
     }
 
@@ -165,8 +164,8 @@
 
     .container-sub {
         flex-direction: column;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
         text-align: left;
     }
 

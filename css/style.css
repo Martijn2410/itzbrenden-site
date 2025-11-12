@@ -117,11 +117,6 @@ main p {
   position: relative;
   align-items: center;
   box-shadow: 0 5px 8px #0000009a;
-  background-color: rgb(from var(--container-clr) r g b / 0.65);
-  backdrop-filter: blur(4px);
-  /* adds the blur effect */
-  -webkit-backdrop-filter: blur(4px);
-  /* Safari support */
 
   h2,
   p {
@@ -380,7 +375,7 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  border-radius: 1.5em;
+  border-radius: 2.5em;
   border: 1px solid var(--line-clr);
   box-shadow: 0 5px 8px #0000009a;
   box-sizing: border-box;
@@ -393,7 +388,7 @@ details[open] div {
   overflow: hidden;
   border: 1px solid var(--line-clr);
   background-color: var(--accent-clr);
-  border-radius: 1.5em;
+  border-radius: 2.5em;
   box-shadow: 0 5px 8px #0000009a;
   box-sizing: border-box;
 }
@@ -543,16 +538,23 @@ details[open] div {
     width: 35%;
     margin-left: 5rem;
   }
-
-
 }
-
 
 @media(max-width: 910px) {
   body {
-    grid-template-columns: 1fr;
-    transition: none;
-    background-attachment: fixed;
+  /* Fallback for no-JS */
+  min-height: 100vh;
+
+  /* Use the custom variable from JS */
+  min-height: var(--app-height);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-image: url("../img/background.webp");
+  background-color: var(--background-clr);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   }
 
   main {
