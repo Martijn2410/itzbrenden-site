@@ -53,8 +53,12 @@ html {
 }
 
 body {
+  /* Fallback for no-JS */
   min-height: 100vh;
-  min-height: 100svh;
+
+  /* Use the custom variable from JS */
+  min-height: var(--app-height);
+
   display: grid;
   grid-template-columns: auto 1fr;
   background-image: url("../img/background.webp");
@@ -62,7 +66,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 body::before {
