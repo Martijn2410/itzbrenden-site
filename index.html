@@ -18,6 +18,24 @@
   <script type="text/javascript" src="js/app.js" defer></script>
 </head>
 
+<script>
+  // Function to set the app height CSS variable
+  function setAppHeight() {
+    const innerHeight = window.innerHeight;
+    document.documentElement.style.setProperty(
+      '--app-height',
+      `${innerHeight}px`
+    );
+  }
+
+  // Run it on load and on resize
+  window.addEventListener('load', setAppHeight);
+  window.addEventListener('resize', setAppHeight);
+
+  // Run it right away
+  setAppHeight();
+</script>
+
 <body>
   <nav id="sidebar">
     <ul>
