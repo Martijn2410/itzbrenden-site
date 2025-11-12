@@ -54,7 +54,7 @@ html {
 
 body {
   min-height: 100vh;
-  min-height: 100lvh;
+  min-height: 100svh;
   display: grid;
   grid-template-columns: auto 1fr;
   background-image: url("../img/background.webp");
@@ -62,6 +62,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 body::before {
