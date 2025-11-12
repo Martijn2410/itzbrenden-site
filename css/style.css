@@ -49,6 +49,7 @@
 html {
   font-family: Poppins;
   line-height: 1.5rem;
+  height: 100%;
 }
 
 body {
@@ -65,15 +66,20 @@ body {
 
 body::before {
   content: "";
-  position: fixed; /* fixed makes it stay put while scrolling */
-  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  position: fixed;
+  /* fixed makes it stay put while scrolling */
+  inset: 0;
+  /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
   background-image: url("../img/background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(10px); /* adjust blur intensity here */
-  transform: scale(1.05); /* slightly zoom to hide edge blur artifacts */
-  z-index: -1; /* put it behind the content */
+  filter: blur(10px);
+  /* adjust blur intensity here */
+  transform: scale(1.05);
+  /* slightly zoom to hide edge blur artifacts */
+  z-index: -1;
+  /* put it behind the content */
 }
 
 main {
@@ -84,6 +90,18 @@ main p {
   color: var(--secondary-text-clr);
   margin-top: 5px;
   margin-bottom: 15px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  right: 0;
+  bottom: 0.5px;
+  overflow-x: hidden;
+  /* or any other value */
+  overflow-y: auto;
+  /* or any other value */
 }
 
 .container-main {
@@ -107,7 +125,9 @@ main p {
   }
 }
 
-.container h3, .container-story, label{
+.container h3,
+.container-story,
+label {
   color: var(--text-clr);
 }
 
