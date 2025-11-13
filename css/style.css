@@ -99,7 +99,7 @@ main p {
 
 .container-main {
   border: 1px solid var(--line-clr);
-  border-radius: 1.5em;
+  border-radius: 2.5rem;
   margin-bottom: 20px;
   margin-right: 10rem;
   padding: min(3em, 15%);
@@ -473,12 +473,12 @@ details[open] div {
   padding: 2rem;
   gap: 2rem;
   background-color: rgb(from var(--container-clr) r g b / 0.65);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(20px);
   /* adds the blur effect */
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
   /* Safari support */
   border: 1px solid var(--line-clr);
-  border-radius: 1.5rem;
+  border-radius: 2.5rem;
   box-shadow: 0 5px 8px #0000009a;
   flex-wrap: wrap;
 }
@@ -657,5 +657,10 @@ details[open] div {
   .story-image-outline:hover {
     transform: none;
     border: none;
+  }
+
+  .settings-section {
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
   }
 }

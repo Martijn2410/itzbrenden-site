@@ -138,8 +138,8 @@
 
 @media(max-width: 910px) {
     .container {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
         padding: 1.5em;
         box-shadow: 0 5px 8px #0000009a;
         text-align: left;
