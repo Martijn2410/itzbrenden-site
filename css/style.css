@@ -3,7 +3,7 @@
 :root {
   --base-clr: #ffffff;
   --nav-clr: #f0f4f965;
-  --background-clr: #a9a1e9;
+  --background-clr: #000025;
   --container-clr: #ffffff;
   --line-clr: #000000;
   --img-line-clr: #42434a;
@@ -23,7 +23,7 @@
   :root {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
-    --background-clr: #1e203f;
+    --background-clr: #000025;
     --container-clr: #000000;
     --line-clr: #494949;
     --img-line-clr: #42434a;
