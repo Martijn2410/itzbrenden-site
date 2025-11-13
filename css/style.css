@@ -55,17 +55,13 @@ html {
 body {
   /* Fallback for no-JS */
   min-height: 100vh;
-
-  /* Use the custom variable from JS */
-  min-height: var(--app-height);
-
+  background-color: var(--background-clr);
   display: grid;
   grid-template-columns: auto 1fr;
 }
 
 #background {
   background-image: url("../img/background.webp");
-  background-color: var(--background-clr);
   height: 100vh;
   width: 100%;
   background-size: cover;
