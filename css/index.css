@@ -119,6 +119,23 @@
     margin-right: 2em;
 }
 
+@media(max-width > 2500px) {
+    .container {
+        margin-left: 25rem;
+        margin-right: 25rem;
+    }
+
+    .container-upper {
+        margin-left: 25rem;
+        margin-right: 25rem;
+    }
+
+    .container-sub {
+        margin-left: 25rem;
+        margin-right: 25rem;
+    }
+}
+
 @media(max-width: 1600px) {
     .container {
         margin-left: 5rem;
