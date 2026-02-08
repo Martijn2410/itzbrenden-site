@@ -1,46 +1,41 @@
 .container {
-    border: 1px solid var(--line-clr);
-    border-radius: 2.5em;
+    border: var(--border-radius) solid var(--line-clr);
+    border-radius: 1.5em;
     margin-left: 20rem;
     margin-right: 20rem;
     margin-bottom: 20px;
     padding: min(3em, 15%);
     position: relative;
     align-items: center;
-    box-shadow: 0 5px 8px #0000009a;
-    background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 5px 0px var(--shadow-drop);
+    background-color: var(--container-clr);
 }
 
 .container-story {
-    border: 1px solid var(--line-clr);
+    border: var(--border-radius) solid var(--line-clr);
     border-radius: 1.5em;
     margin-bottom: 20px;
     padding: min(3em, 15%);
     position: relative;
     align-items: center;
-    box-shadow: 0 5px 8px #0000009a;
-    background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 5px 0px var(--shadow-drop);
+    background-color: var(--container-clr);
 }
 
 .container-upper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--container-clr);
     padding: 1rem 1rem;
     border-radius: 10rem;
-    border: 1px solid var(--line-clr);
-    margin-left: 20rem;
-    margin-right: 20rem;
+    border: var(--border-radius) solid var(--line-clr);
+    margin-left: 18rem;
+    margin-right: 18rem;
     margin-bottom: 20px;
+    margin-top: 10px;
     color: white;
-    box-shadow: 0 5px 8px #0000009a;
+    box-shadow: 0 5px 0px var(--shadow-drop);
 }
 
 .container-upper .icon-container {
@@ -72,17 +67,15 @@
     display: flex;
     justify-content: space-between;
     align-items: left;
-    background-color: rgb(from var(--container-clr) r g b / 0.65);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--container-clr);
     padding: 1.5em 2em;
-    border-radius: 2.5rem;
-    border: 1px solid var(--line-clr);
+    border-radius: 1.5rem;
+    border: var(--border-radius) solid var(--line-clr);
     margin-left: 20rem;
     margin-right: 20rem;
     margin-bottom: 20px;
     color: white;
-    box-shadow: 0 5px 8px #0000009a;
+    box-shadow: 0 5px 0px var(--shadow-drop);
 }
 
 
@@ -158,7 +151,7 @@
         margin-left: 0.15rem;
         margin-right: 0.15rem;
         padding: 1.5em;
-        box-shadow: 0 5px 8px #0000009a;
+        box-shadow: 0 5px 0px var(--shadow-drop);
         text-align: left;
     }
 

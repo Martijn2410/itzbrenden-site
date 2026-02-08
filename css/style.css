@@ -3,13 +3,14 @@
 :root {
   --base-clr: #ffffff;
   --nav-clr: #f0f4f965;
-  --background-clr: #000025;
+  --background-clr: #aaaae4;
   --container-clr: #ffffff;
   --line-clr: #000000;
   --img-line-clr: #42434a;
-  --hover-clr: #9badfcbd;
+  --hover-clr: rgba(155, 173, 252, 0.473);
   --text-clr: #000000;
   --accent-clr: #2e3192;
+  --stat-clr: #6164c5;
   --story-select-clr: #fff;
   --secondary-text-clr: #000000;
   --btn-bg: #c6c9ff;
@@ -17,19 +18,22 @@
   --social-btn-bckgrnd: #31313169;
   --social-btn-outline: #666666;
   --social-btn-color: #000000;
+  --shadow-drop: #000;
+  --border-radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
-    --background-clr: #000025;
-    --container-clr: #000000;
+    --background-clr: #111111;
+    --container-clr: #22222b;
     --line-clr: #494949;
     --img-line-clr: #42434a;
     --hover-clr: #282d3d;
     --text-clr: #e6e6ef;
     --accent-clr: #7478ff;
+    --stat-clr: #6164c5;
     --story-select-clr: #fff;
     --secondary-text-clr: #b0b3c1;
     --btn-bg: #505177;
@@ -37,6 +41,8 @@
     --social-btn-bckgrnd: #afafaf69;
     --social-btn-outline: #9c9c9c;
     --social-btn-color: #ffffff;
+    --shadow-drop: #00000000;
+    --border-radius: 1px;
   }
 }
 
@@ -94,14 +100,14 @@ main p {
 }
 
 .container-main {
-  border: 1px solid var(--line-clr);
+  border: var(--border-radius) solid var(--line-clr);
   border-radius: 2.5rem;
   margin-bottom: 20px;
   margin-right: 10rem;
   padding: min(3em, 15%);
   position: relative;
   align-items: center;
-  box-shadow: 0 5px 8px #0000009a;
+  box-shadow: 0 5px 0px var(--shadow-drop);
 
   h2,
   p {
@@ -133,23 +139,22 @@ label {
 
 
 .social-button {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(from var(--container-clr) r g b / 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--line-clr);
+  background-color: var(--container-clr);
+  border: var(--border-radius) solid var(--line-clr);
   border-radius: 5rem;
   text-decoration: none;
   color: var(--social-btn-color);
-  box-shadow: 0 5px 8px #0000009a;
+  box-shadow: 0 5px 0px var(--shadow-drop);
 }
 
 .social-button:hover {
   transform: scale(1.05);
+  transition: 0.2s;
 }
 
 .warning-container {
@@ -194,7 +199,7 @@ label {
   overflow: hidden;
   border-radius: 1.5rem;
   margin-bottom: 20px;
-  box-shadow: 0 5px 8px #0000009a;
+  box-shadow: 0 5px 0px var(--shadow-drop);
 }
 
 .img-container-main {
@@ -204,8 +209,8 @@ label {
   border-radius: 1.5rem;
   margin-bottom: 20px;
   margin-left: 10rem;
-  box-shadow: 0 5px 8px #0000009a;
-  border: 1px solid var(--line-clr);
+  box-shadow: 0 5px 0px var(--shadow-drop);
+  border: var(--border-radius) solid var(--line-clr);
 }
 
 .img-container-main img {
@@ -241,7 +246,7 @@ label {
 }
 
 .story-image-outline {
-  border: 5px solid rgba(124, 124, 124, 0);
+  border: var(--border-radius) solid var(--img-line-clr);
 }
 
 .story-image-outline:hover {
@@ -271,7 +276,7 @@ label {
 }
 
 .banner-outline {
-  border: 5px solid rgba(124, 124, 124, 0.603);
+  border: var(--border-radius) solid rgba(124, 124, 124, 0.603);
 }
 
 details {
@@ -338,7 +343,7 @@ details[open] div {
   background: #353b48;
   display: block;
   height: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: var(--border-radius) solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   overflow: hidden;
 
@@ -360,10 +365,11 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  border-radius: 2.5em;
-  border: 1px solid var(--line-clr);
-  box-shadow: 0 5px 8px #0000009a;
+  border-radius: 1.5em;
+  border: var(--border-radius) solid var(--line-clr);
+  box-shadow: 0 5px 0px var(--shadow-drop);
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .image-containerNoEffect {
@@ -371,11 +377,12 @@ details[open] div {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  border: 1px solid var(--line-clr);
+  border: var(--border-radius) solid var(--line-clr);
   background-color: var(--accent-clr);
-  border-radius: 2.5em;
-  box-shadow: 0 5px 8px #0000009a;
+  border-radius: 1.5em;
+  box-shadow: 0 5px 0px var(--shadow-drop);
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 
@@ -393,17 +400,17 @@ details[open] div {
   left: 0;
   width: 100%;
   text-align: center;
-  color: white;
+  color: var(--text-clr);
   font-size: 20px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--container-clr);
   padding: 10px 14px;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   box-sizing: border-box;
 
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   border-top: 1px solid var(--img-line-clr);
 }
@@ -411,12 +418,6 @@ details[open] div {
 .image-container:hover img {
   transform: scale(1.1);
   z-index: 1;
-}
-
-/* Optional glow on hover */
-.image-container:hover {
-  box-shadow:
-    0 0 0 4px var(--accent-clr)
 }
 
 .image-button {
@@ -473,9 +474,9 @@ details[open] div {
   /* adds the blur effect */
   -webkit-backdrop-filter: blur(20px);
   /* Safari support */
-  border: 1px solid var(--line-clr);
+  border: var(--border-radius) solid var(--line-clr);
   border-radius: 2.5rem;
-  box-shadow: 0 5px 8px #0000009a;
+  box-shadow: 0 5px 0px var(--shadow-drop);
   flex-wrap: wrap;
 }
 
@@ -503,7 +504,7 @@ details[open] div {
 .settings-section button {
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  border: 1px solid var(--line-clr);
+  border: var(--border-radius) solid var(--line-clr);
   background-color: var(--btn-bg);
   color: var(--text-clr);
 }
@@ -511,7 +512,7 @@ details[open] div {
 #theme-select {
   padding: 0.5rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: var(--border-radius) solid #ccc;
 }
 
 @media screen and (max-width: 1700px) {
@@ -542,7 +543,7 @@ details[open] div {
     float: none;
     width: 100%;
     margin: 0;
-    box-shadow: none;
+    box-shadow: 0 5px 0px var(--shadow-drop);
     background-color: #00000000;
   }
 
@@ -559,7 +560,7 @@ details[open] div {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: none;
+    box-shadow: 0 5px 0px var(--shadow-drop);
   }
 
   .img-container-main {
@@ -571,7 +572,7 @@ details[open] div {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 20px;
-    box-shadow: none;
+    box-shadow: 0 5px 0px var(--shadow-drop);
   }
 
   .img-container1 {

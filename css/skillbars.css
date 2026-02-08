@@ -16,32 +16,32 @@
 
     &.bad::before {
         width: calc(20% - 10px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
 
     &.ok::before {
         width: calc(33% - 10px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
 
     &.neutral::before {
         width: calc(50% - 10px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
 
     &.decent::before {
         width: calc(60% - 1px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
 
     &.great::before {
         width: calc(80% - 10px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
 
     &.expert::before {
         width: calc(100% - 10px);
-        background: var(--accent-clr)
+        background: var(--stat-clr)
     }
     
 }

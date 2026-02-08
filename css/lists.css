@@ -12,9 +12,9 @@
 
 @media screen and (max-width:1920px) {
     .list-art {
-        columns: 2;
-        margin-left: 20rem;
-        margin-right: 20rem;
+        columns: 3;
+        margin-left: 10rem;
+        margin-right: 10rem;
     }
 
 }
