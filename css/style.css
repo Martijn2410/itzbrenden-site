@@ -150,12 +150,17 @@ label {
   text-decoration: none;
   color: var(--social-btn-color);
   box-shadow: 0 5px 0px var(--shadow-drop);
+  transition: transform 0.2s ease-in-out;
 }
 
 .social-button:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
+  transform: scale(1.1);
 }
+
+.social-button:active {
+  transform: scale(0.98);
+}
+
 
 .warning-container {
   background-color: rgba(255, 217, 0, 0.575);

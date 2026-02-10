@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   align-self: start;
-  /* transition: 300ms ease-in-out; */
+  transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
   z-index: 10;
@@ -21,6 +21,19 @@
 #sidebar.close {
   padding: 5px;
   width: 60px;
+}
+
+#sidebar.close i {
+  margin-left: -2px;
+}
+
+#sidebar span {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+#sidebar.close span {
+  opacity: 0;
 }
 
 #sidebar ul {
