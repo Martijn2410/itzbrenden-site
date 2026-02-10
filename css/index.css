@@ -112,6 +112,12 @@
     margin-right: 2em;
 }
 
+.unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 @media(max-width > 2500px) {
     .container {
         margin-left: 25rem;
