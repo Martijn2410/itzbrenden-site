@@ -3,13 +3,15 @@
 :root {
   --base-clr: #ffffff;
   --nav-clr: #f0f4f965;
-  --background-clr: #aaaae4;
+  --background-clr: rgb(170, 170, 228);
+  --background-dot: #a1a2da;
   --container-clr: #ffffff;
   --line-clr: #000000;
   --img-line-clr: #42434a;
   --hover-clr: rgba(155, 173, 252, 0.473);
   --text-clr: #000000;
   --accent-clr: #2e3192;
+  --like-clr: #8488ee;
   --stat-clr: #6164c5;
   --story-select-clr: #fff;
   --secondary-text-clr: #000000;
@@ -26,8 +28,9 @@
   :root {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
-    --background-clr: #111111;
-    --container-clr: #22222b;
+    --background-clr: #080808;
+    --background-dot: #2020204f;
+    --container-clr: #1a1a22;
     --line-clr: #494949;
     --img-line-clr: #42434a;
     --hover-clr: #282d3d;
@@ -59,11 +62,25 @@ html {
 }
 
 body {
-  /* Fallback for no-JS */
-  min-height: 100vh;
+  background-image: 
+  radial-gradient(var(--background-dot) 20%, transparent 20%), 
+  radial-gradient(var(--background-dot) 20%, transparent 20%);
   background-color: var(--background-clr);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  background-attachment: fixed;
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
+}
+
+.polka {
+  background-image: 
+    radial-gradient(rgb(184, 183, 251) 30%, transparent 30%),
+    radial-gradient(rgb(184, 183, 251) 30%, transparent 30%);
+  background-position: 0px 0px, 104px 104px;
+  background-size: 208px 208px;
+  background-color: rgb(170, 170, 228);
 }
 
 #background {
@@ -450,7 +467,7 @@ details[open] div {
 }
 
 .like-button.liked {
-  color: #ffd970
+  color: var(--like-clr);
 }
 
 .like-button:active {
@@ -541,11 +558,7 @@ details[open] div {
   align-items: center;
   padding: 2rem;
   gap: 2rem;
-  background-color: rgb(from var(--container-clr) r g b / 0.65);
-  backdrop-filter: blur(20px);
-  /* adds the blur effect */
-  -webkit-backdrop-filter: blur(20px);
-  /* Safari support */
+  background-color: var(--container-clr);
   border: var(--border-radius) solid var(--line-clr);
   border-radius: 2.5rem;
   box-shadow: 0 5px 0px var(--shadow-drop);

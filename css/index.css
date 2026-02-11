@@ -33,12 +33,37 @@
     margin-left: 18rem;
     margin-right: 18rem;
     margin-bottom: 20px;
-    margin-top: 10px;
     color: white;
     box-shadow: 0 5px 0px var(--shadow-drop);
 }
 
-.container-upper .icon-container {
+.container-upper-test {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--container-clr);
+    padding: 1rem;
+    border-radius: 10rem;
+    border: var(--border-radius) solid var(--line-clr);
+
+    margin: 20px 18rem;
+    /* adjust if needed */
+    color: white;
+    box-shadow: 0 5px 0px var(--shadow-drop);
+
+    z-index: 1000;
+    /* ensures it stays above other elements */
+}
+
+
+.container-upper .icon-container,
+.container-upper-test .icon-container {
     background-color: #5865F2;
     border-radius: 10rem;
     width: 50px;
@@ -50,7 +75,8 @@
     overflow: hidden;
 }
 
-.container-upper .icon-container img {
+.container-upper .icon-container img,
+.container-upper-test .icon-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -58,15 +84,18 @@
 }
 
 /* Text content on the right */
-.container-upper .text-content {
+.container-upper .text-content,
+.container-upper-test .text-content {
     flex: 1;
     color: var(--text-clr);
+    text-align: center;
+    margin-right: 60px;
 }
 
 .container-sub {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: stretch;
     background-color: var(--container-clr);
     padding: 1.5em 2em;
     border-radius: 1.5rem;
@@ -103,6 +132,50 @@
     display: block;
 }
 
+.container-sub-char {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+/* LEFT SIDE */
+.container-sub-char .left-side-char {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* TEXT AREA (TOP LEFT) */
+.container-sub-char .text-content-char {
+    color: var(--text-clr);
+}
+
+/* STATS (BOTTOM LEFT) */
+.container-sub-char .stats {
+    margin-top: 2rem;
+}
+
+/* RIGHT SIDE IMAGE */
+.container-sub-char .icon-container-char {
+    background-color: #5865F2;
+    border-radius: 2rem;
+    width: 450px;
+    /* slightly larger like your screenshot */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container-sub-char .icon-container-char img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 .container-sub.reverse {
     flex-direction: row-reverse;
 }
@@ -113,9 +186,9 @@
 }
 
 .unselectable {
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 @media(max-width > 2500px) {
@@ -150,6 +223,11 @@
         margin-left: 5rem;
         margin-right: 5rem;
     }
+
+    .container-sub-char .icon-container-char {
+        width: 250px;
+    }
+
 }
 
 @media(max-width: 910px) {
@@ -161,20 +239,23 @@
         text-align: left;
     }
 
-    .container-upper {
+    .container-upper,
+    .container-upper-test {
         margin-left: 0.15rem;
         margin-right: 0.15rem;
         padding: .5em;
     }
 
-    .container-upper .icon-container {
+    .container-upper .icon-container,
+    .container-upper-test .icon-container {
         width: 50px;
         height: 50px;
         margin-right: 1rem;
         margin-left: .25rem;
     }
 
-    .container-upper .text-content {
+    .container-upper .text-content,
+    .container-upper-test .text-content {
         font-size: 0.8rem;
     }
 
@@ -199,4 +280,42 @@
         margin-left: none;
         margin-right: none;
     }
+
+    /* ===== MOBILE - CHAR LAYOUT ===== */
+
+    .container-sub-char {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
+    }
+
+    /* Left column becomes normal stacked layout */
+    .container-sub-char .left-side-char {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* Text stays on top */
+    .container-sub-char .text-content-char {
+        width: 100%;
+    }
+
+    /* Stats below text */
+    .container-sub-char .stats {
+        margin-top: 1.5rem;
+    }
+
+    /* Image becomes full width */
+    .container-sub-char .icon-container-char {
+        width: 100%;
+        margin: 0;
+        border-radius: 1.5rem;
+    }
+
+    /* Optional: control image height on mobile */
+    .container-sub-char .icon-container-char img {
+        height: auto;
+    }
+
 }
