@@ -70,12 +70,12 @@ html {
 }
 
 body {
-  background-image: 
+  /* background-image: 
   radial-gradient(var(--background-dot) 30%, transparent 20%), 
-  radial-gradient(var(--background-dot) 30%, transparent 20%);
+  radial-gradient(var(--background-dot) 30%, transparent 20%); */
   background-color: var(--background-clr);
-  background-position: 0 0, 50px 50px;
-  background-size: 100px 100px;
+  /* background-position: 0 0, 50px 50px;
+  background-size: 100px 100px; */
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
