@@ -1,17 +1,17 @@
 .skillbar {
     background-color: var(--btn-bg);
-    padding: 5px;
     border-radius: 50px;
+    border: 2px solid var(--stat-outline);
     margin-bottom: 5px;
     font-size: 14px;
-    color: var( --text-clr);
+    color: #fff;
     font-weight: bold;
 
     &::before {
         content: attr(data-skill);
         display: inline-block;
         border-radius: inherit;
-         padding-left: 10px;
+        padding-left: 10px;
     }
 
     &.bad::before {
@@ -43,5 +43,5 @@
         width: calc(100% - 10px);
         background: var(--stat-clr)
     }
-    
+
 }

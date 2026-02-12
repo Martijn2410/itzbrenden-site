@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: 'Custom-Font';
+    src: url(../fonts/BurbankBigRegular-Bold.otf);
+}
+
 :root {
   --base-clr: #ffffff;
   --nav-clr: #f0f4f965;
@@ -22,6 +27,7 @@
   --social-btn-color: #000000;
   --shadow-drop: #000;
   --border-radius: 4px;
+  --stat-outline: hsl(237, 100%, 85%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +52,7 @@
     --social-btn-color: #ffffff;
     --shadow-drop: #00000000;
     --border-radius: 1px;
+    --stat-outline: hsl(238, 20%, 25%) ;
   }
 }
 
@@ -56,22 +63,23 @@
 }
 
 html {
-  font-family: Poppins;
-  line-height: 1.5rem;
+  font-family: 'Custom-Font';
+  font-size:large ;
+  line-height: 1.25rem;
   height: 100%;
 }
 
 body {
   background-image: 
-  radial-gradient(var(--background-dot) 20%, transparent 20%), 
-  radial-gradient(var(--background-dot) 20%, transparent 20%);
+  radial-gradient(var(--background-dot) 30%, transparent 20%), 
+  radial-gradient(var(--background-dot) 30%, transparent 20%);
   background-color: var(--background-clr);
   background-position: 0 0, 50px 50px;
   background-size: 100px 100px;
-  background-attachment: fixed;
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
+  transition: 300ms ease-in-out;
 }
 
 .polka {
@@ -81,6 +89,7 @@ body {
   background-position: 0px 0px, 104px 104px;
   background-size: 208px 208px;
   background-color: rgb(170, 170, 228);
+  transition: 300ms ease-in-out;
 }
 
 #background {

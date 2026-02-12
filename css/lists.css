@@ -1,7 +1,7 @@
 .list-stories {
     columns: 2;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 35rem;
+    margin-right: 35rem;
 }
 
 .list-art {
@@ -15,6 +15,12 @@
         columns: 3;
         margin-left: 10rem;
         margin-right: 10rem;
+    }
+
+    .list-stories {
+        columns: 2;
+        margin-left: 15rem;
+        margin-right: 15rem;
     }
 
 }
