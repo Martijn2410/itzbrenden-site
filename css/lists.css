@@ -10,6 +10,21 @@
     margin-right: 20rem;
 }
 
+@media screen and (max-width:2559px) {
+    .list-art {
+        columns: 3;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .list-stories {
+        columns: 2;
+        margin-left: 21rem;
+        margin-right: 21rem;
+    }
+
+}
+
 @media screen and (max-width:1920px) {
     .list-art {
         columns: 3;
@@ -19,8 +34,8 @@
 
     .list-stories {
         columns: 2;
-        margin-left: 15rem;
-        margin-right: 15rem;
+        margin-left: 21rem;
+        margin-right: 21rem;
     }
 
 }

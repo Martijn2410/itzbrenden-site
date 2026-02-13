@@ -1,8 +1,8 @@
 .container {
     border: var(--border-radius) solid var(--line-clr);
     border-radius: 1.5em;
-    margin-left: 35rem;
-    margin-right: 35rem;
+    margin-left: 38rem;
+    margin-right: 38rem;
     margin-bottom: 20px;
     padding: min(3em, 15%);
     position: relative;
@@ -32,8 +32,8 @@
     padding: 1rem 1rem;
     border-radius: 10rem;
     border: var(--border-radius) solid var(--line-clr);
-    margin-left: 33rem;
-    margin-right: 33rem;
+    margin-left: 37rem;
+    margin-right: 37rem;
     margin-bottom: 20px;
     color: white;
     box-shadow: 0 5px 0px var(--shadow-drop);
@@ -107,8 +107,8 @@
     padding: 1.5em 2em;
     border-radius: 1.5rem;
     border: var(--border-radius) solid var(--line-clr);
-    margin-left: 35rem;
-    margin-right: 35rem;
+    margin-left: 38rem;
+    margin-right: 38rem;
     margin-bottom: 20px;
     color: white;
     box-shadow: 0 5px 0px var(--shadow-drop);
@@ -211,20 +211,20 @@
     transition: 300ms ease-in-out;
 }
 
-@media(max-width: 1920px) {
+@media(max-width: 2559px) {
     .container {
-        margin-left: 15rem;
-        margin-right: 15rem;
+        margin-left: 21rem;
+        margin-right: 21rem;
     }
 
     .container-upper {
-        margin-left: 13rem;
-        margin-right: 13rem;
+        margin-left: 20rem;
+        margin-right: 20rem;
     }
 
     .container-sub {
-        margin-left: 15rem;
-        margin-right: 15rem;
+        margin-left: 21rem;
+        margin-right: 21rem;
     }
 
     .container-sub-char .icon-container-char {
@@ -233,7 +233,29 @@
 
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1919px) {
+    .container {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    .container-upper {
+        margin-left: 11rem;
+        margin-right: 11rem;
+    }
+
+    .container-sub {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    .container-sub-char .icon-container-char {
+        width: 250px;
+    }
+
+}
+
+@media(max-width: 1440px) {
     .container {
         margin-left: 5rem;
         margin-right: 5rem;
