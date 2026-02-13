@@ -1,60 +1,36 @@
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const themeSelect = document.getElementById("theme-select");
+  const root = document.documentElement;
 
-// Detect if the browser is Firefox or Firefox-based
-function isFirefoxBased() {
-    return typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox');
-}
+  // Apply theme function
+  function applyTheme(theme) {
+    root.classList.remove("light-theme", "dark-theme");
 
-// This runs before anything else to apply the saved theme
-function applyTheme(theme) {
-    document.body.classList.remove('lightmode', 'darkmode');
-
-    if (isFirefoxBased()) {
-        document.body.classList.add('darkmode'); // Force dark mode for Firefox
-        return;
+    if (theme === "dark") {
+      root.classList.add("dark-theme");
+    } else if (theme === "light") {
+      root.classList.add("light-theme");
     }
+  }
 
-    if (theme === 'dark') {
-        document.body.classList.add('darkmode');
-    } else if (theme === 'light') {
-        document.body.classList.add('lightmode');
-    } else if (prefersDarkScheme.matches) {
-        document.body.classList.add('darkmode');
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+    themeSelect.value = savedTheme;
+  } else {
+    themeSelect.value = "system";
+  }
+
+  // Save theme when changed
+  themeSelect.addEventListener("change", function () {
+    const selectedTheme = this.value;
+
+    if (selectedTheme === "system") {
+      localStorage.removeItem("theme");
+      root.classList.remove("light-theme", "dark-theme");
     } else {
-        document.body.classList.add('lightmode');
+      localStorage.setItem("theme", selectedTheme);
+      applyTheme(selectedTheme);
     }
-}
-
-// Retrieve the stored theme from localStorage or fallback to 'system'
-function getStoredTheme() {
-    return localStorage.getItem('theme') || 'system';
-}
-
-// Set the theme to localStorage and apply it
-function setTheme(theme) {
-    localStorage.setItem('theme', theme);
-    applyTheme(theme);
-}
-
-// On page load (This should run every time the page loads to apply the theme)
-document.addEventListener('DOMContentLoaded', () => {
-    const currentTheme = getStoredTheme();
-    applyTheme(currentTheme);  // Apply the saved theme immediately
-
-    // Only show the theme select dropdown on the page where you want it
-    const themeSelect = document.getElementById('theme-select');
-    if (themeSelect) {
-        themeSelect.value = currentTheme;  // Update the theme selector if available
-        themeSelect.addEventListener('change', (e) => {
-            const selected = e.target.value;
-            setTheme(selected);  // Apply the selected theme
-        });
-    }
-});
-
-// Listen for system theme change (live response)
-prefersDarkScheme.addEventListener('change', () => {
-    if (getStoredTheme() === 'system' && !isFirefoxBased()) {
-        applyTheme('system');
-    }
-});
+  });

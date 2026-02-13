@@ -1,8 +1,8 @@
 .container {
     border: var(--border-radius) solid var(--line-clr);
     border-radius: 1.5em;
-    margin-left: 38rem;
-    margin-right: 38rem;
+    margin-left: 21%;
+    margin-right: 21%;
     margin-bottom: 20px;
     padding: min(3em, 15%);
     position: relative;
@@ -32,8 +32,8 @@
     padding: 1rem 1rem;
     border-radius: 10rem;
     border: var(--border-radius) solid var(--line-clr);
-    margin-left: 37rem;
-    margin-right: 37rem;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 20px;
     color: white;
     box-shadow: 0 5px 0px var(--shadow-drop);
@@ -107,8 +107,8 @@
     padding: 1.5em 2em;
     border-radius: 1.5rem;
     border: var(--border-radius) solid var(--line-clr);
-    margin-left: 38rem;
-    margin-right: 38rem;
+    margin-left: 21%;
+    margin-right: 21%;
     margin-bottom: 20px;
     color: white;
     box-shadow: 0 5px 0px var(--shadow-drop);
@@ -211,7 +211,7 @@
     transition: 300ms ease-in-out;
 }
 
-@media(max-width: 2559px) {
+/* @media(max-width: 2559px) {
     .container {
         margin-left: 21rem;
         margin-right: 21rem;
@@ -275,7 +275,7 @@
         width: 250px;
     }
 
-}
+} */
 
 @media(max-width: 910px) {
     .container {

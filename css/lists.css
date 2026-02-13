@@ -1,41 +1,33 @@
 .list-stories {
     columns: 2;
-    margin-left: 35rem;
-    margin-right: 35rem;
+    margin-left: 21%;
+    margin-right: 21%;
 }
 
 .list-art {
     columns: 4;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 @media screen and (max-width:2559px) {
     .list-art {
         columns: 3;
-        margin-left: 10rem;
-        margin-right: 10rem;
     }
 
     .list-stories {
         columns: 2;
-        margin-left: 21rem;
-        margin-right: 21rem;
     }
 
 }
 
 @media screen and (max-width:1920px) {
     .list-art {
-        columns: 3;
-        margin-left: 10rem;
-        margin-right: 10rem;
+        columns: 2;
     }
 
     .list-stories {
         columns: 2;
-        margin-left: 21rem;
-        margin-right: 21rem;
     }
 
 }
@@ -43,14 +35,10 @@
 @media screen and (max-width: 1600px) {
     .list-stories {
         columns: 2;
-        margin-left: 5rem;
-        margin-right: 5rem;
     }
 
     .list-art {
         columns: 2;
-        margin-left: 5rem;
-        margin-right: 5rem;
     }
 }
 

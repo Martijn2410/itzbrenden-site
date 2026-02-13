@@ -16,6 +16,7 @@
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="text/javascript" src="js/app.js" defer></script>
+  <!-- <script type="text/javascript" src="js/darkmode.js" defer></script> -->
 </head>
 
 <body>
@@ -117,23 +118,6 @@
       </a>
     </div>
   </main>
-  <script>
-    // Function to set the app height CSS variable
-    function setAppHeight() {
-      const innerHeight = window.innerHeight;
-      document.documentElement.style.setProperty(
-        '--app-height',
-        `${innerHeight}px`
-      );
-    }
-
-    // Run it on load and on resize
-    window.addEventListener('load', setAppHeight);
-    window.addEventListener('resize', setAppHeight);
-
-    // Run it right away
-    setAppHeight();
-  </script>
 </body>
 
 </html>

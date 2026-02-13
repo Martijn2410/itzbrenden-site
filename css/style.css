@@ -30,8 +30,9 @@
   --stat-outline: hsl(237, 100%, 85%);
 }
 
+/* SYSTEM DARK (fallback if no manual theme set) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light-theme):not(.dark-theme) {
     --base-clr: #131314;
     --nav-clr: #1e1f20;
     --background-clr: #080808;
@@ -52,9 +53,40 @@
     --social-btn-color: #ffffff;
     --shadow-drop: #00000000;
     --border-radius: 1px;
-    --stat-outline: hsl(238, 20%, 25%) ;
+    --stat-outline: hsl(238, 20%, 25%);
   }
 }
+
+:root.light-theme {
+  /* Just reuse your default :root values */
+}
+
+
+/* MANUAL DARK THEME */
+:root.dark-theme {
+  --base-clr: #131314;
+  --nav-clr: #1e1f20;
+  --background-clr: #080808;
+  --background-dot: #2020204f;
+  --container-clr: #1a1a22;
+  --line-clr: #494949;
+  --img-line-clr: #42434a;
+  --hover-clr: #282d3d;
+  --text-clr: #e6e6ef;
+  --accent-clr: #7478ff;
+  --stat-clr: #6164c5;
+  --story-select-clr: #fff;
+  --secondary-text-clr: #b0b3c1;
+  --btn-bg: #505177;
+  --btn-hover-bg: #c9d2fa8f;
+  --social-btn-bckgrnd: #afafaf69;
+  --social-btn-outline: #9c9c9c;
+  --social-btn-color: #ffffff;
+  --shadow-drop: #00000000;
+  --border-radius: 1px;
+  --stat-outline: hsl(238, 20%, 25%);
+}
+
 
 * {
   margin: 0;
@@ -577,6 +609,7 @@ details[open] div {
 .settings-section .text {
   flex: 1;
   min-width: 200px;
+  color: var(--text-clr);
 }
 
 .settings-section .controls {
