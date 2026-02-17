@@ -135,6 +135,22 @@ body {
   z-index: -1;
 }
 
+#background-doro {
+  background-image: url("../img/Lx_a.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.doror{
+  text-decoration: none;
+  color: var(--secondary-text-clr);
+}
+
 main {
   padding: min(30px, 7%);
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OC Extras - itzbrenden.com</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/LauraReborn6_PFP.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <script type="text/javascript" src="js/app.js" defer></script>
+  <!-- <script type="text/javascript" src="js/darkmode.js" defer></script> -->
+</head>
+
+<body>
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">ItzBrenden.com</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home-circle bx-sm'></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="profile.html">
+          <i class='bx bx-user bx-sm' ></i>
+          <span>About me</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfolio.html">
+          <i class='bx bx-photo-album bx-sm' ></i>
+          <span>Art Portfolio</span>
+        </a>
+      </li>
+      <li class="active1">
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <i class='bx bxs-archive bx-sm'></i>
+          <span class="">OC Content</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+          </svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="extras.html">Extras</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <a href="settings.html">
+          <i class='bx bx-cog bx-sm'></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div id="background-doro"></div>
+  <main>
+    <!-- <div class="container-upper">
+      <div class="icon-container">
+        <i class='bx bx-user bx-sm'></i>
+      </div>
+      <div class="text-content">
+        <h2>Extras</h2>
+      </div>
+    </div> -->
+  </main>
+</body>
+</html>
