@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projects - ItzBrenden.com</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
+</head>
+
+<body>
+  <div id="background"></div>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background.webm" type="video/webm">
+  </video>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
+      <p class="logo-text">OC Projects</p>
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1;">Home</a>
+      <a href="about.html" style="--i:2;">About me</a>
+      <a href="portfolio.html" style="--i:3;">Art Portfolio</a>
+      <a href="" style="--i:4;">OC Projects</a>
+    </nav>
+  </header>
+
+  <main class="container-row">
+    <a href="ocstories.html" class="container-home glass">
+      <img src="img/StoryBanners_AccidentZero.webp" alt="" class="container-image">
+      <div class="container-caption"><span>Main Story</span></div>
+    </a>
+
+    <a href="" class="container-home glass">
+      <img src="img/StoryBanners_Desire.webp" alt="" class="container-image">
+      <div class="container-caption"><span>Side Stories</span></div>
+    </a>
+
+    <a href="" class="container-home glass">
+      <img src="img/StoryBanners_Legends.webp" alt="" class="container-image">
+      <div class="container-caption"><span>Extras</span></div>
+    </a>
+  </main>
+  <div class="circular-buttons-container">
+    <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
+      <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+  </div>
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+      video.classList.add("loaded");
+    });
+  </script>
+</body>
+
+</html>

@@ -4,92 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Portfolio - itzbrenden.com</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Art Portfolio - ItzBrenden.com</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/lists.css">
-  <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/skeletonloading.css">
   <link rel="stylesheet" href="css/imagefocus.css">
-  <link rel="shortcut icon" type="image/x-icon" href="img/LauraReborn6_PFP.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=thumb_up" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
-  <script type="text/javascript" src="js/app.js" defer></script>
-  <!-- <script type="text/javascript" src="js/darkmode.js" defer></script> -->
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=thumb_up" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
+  <script type="text/javascript" src="js/portfolio-navbar.js" defer></script>
   <script type="text/javascript" src="js/imagefocus.js" defer></script>
   <script type="text/javascript" src="js/likes.js" defer></script>
 </head>
 
-<body>
-  <nav id="sidebar">
-    <ul>
-      <li>
-        <span class="logo">ItzBrenden.com</span>
-        <button onclick=toggleSidebar() id="toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path
-              d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
-          </svg>
-        </button>
-      </li>
-      <li>
-        <a href="index.html">
-          <i class='bx bx-home-circle bx-sm'></i>
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="profile.html">
-          <i class='bx bx-user bx-sm'></i>
-          <span>About me</span>
-        </a>
-      </li>
-      <li class="active">
-        <a href="portfolio.html">
-          <i class='bx bxs-photo-album bx-sm'></i>
-          <span>Art Portfolio</span>
-        </a>
-      </li>
-      <li>
-        <button onclick=toggleSubMenu(this) class="dropdown-btn">
-          <i class='bx bx-archive bx-sm'></i>
-          <span>OC Content</span>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path
-              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
-          </svg>
-        </button>
-        <ul class="sub-menu">
-          <div>
-            <li><a href="stories.html">Stories</a></li>
-            <li><a href="characters.html">Characters</a></li>
-            <li><a href="extras.html">Extras</a></li>
-          </div>
-        </ul>
-      </li>
-      <li>
-        <a href="settings.html">
-          <i class='bx bx-cog bx-sm'></i>
-          <span>Settings</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+<body class="portfolio-page">
+
+  <div id="background"></div>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background.webm" type="video/webm">
+  </video>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
+      <p class="logo-text">Art Portfolio</p>
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1;">Home</a>
+      <a href="about.html" style="--i:2;">About me</a>
+      <a href="" style="--i:3;">Art Portfolio</a>
+      <a href="projects.html" style="--i:4;">OC Projects</a>
+    </nav>
+  </header>
+
   <!-- <div id="background"></div> -->
   <main>
-    <div class="container-upper">
-      <div class="icon-container">
-        <i class='bx bx-brush bx-sm'></i>
-      </div>
-      <div class="text-content">
-        <h2>Art Portfolio</h2>
-      </div>
-    </div>
     <div class="lightbox" id="lightbox">
       <span class="imageClose">&times;</span>
       <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded Art" />
@@ -97,10 +57,12 @@
     <div class="list-art">
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-snowmiku" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-snowmiku"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1wKOZXo3dRYg1zO50_LtZ5ae1BQrOP95d" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1wKOZXo3dRYg1zO50_LtZ5ae1BQrOP95d" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Snow Miku v4 Final Final.png">
@@ -108,7 +70,8 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-2025Bday" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-2025Bday"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
         <!-- <a href="" target="_blank" class="image-container-download unselectable" aria-label="Download image">
@@ -119,10 +82,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-DriftDrip" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-DriftDrip"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1ngVhjKwG1N93IGRYMMGaYvDsoNA8nf_7" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1ngVhjKwG1N93IGRYMMGaYvDsoNA8nf_7" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/OG5Remake - lower cromab.webp">
@@ -130,10 +95,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-Daigo" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-Daigo"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=10yrDMDMJTYT1HJinc1q2phgiqjbaiMrk" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=10yrDMDMJTYT1HJinc1q2phgiqjbaiMrk" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Ch6S3-Daigo Final.webp">
@@ -141,10 +108,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-SWEvie" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-SWEvie"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1DtZ0ypi6t51xX_qewffP6kBhhZYLgr6I" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1DtZ0ypi6t51xX_qewffP6kBhhZYLgr6I" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Ch6MS1.webp">
@@ -152,7 +121,8 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-BunnyLawa" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-BunnyLawa"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
         <!-- <a href="" target="_blank" class="image-container-download unselectable" aria-label="Download image">
@@ -174,7 +144,8 @@
       </div> -->
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-LawaBappy5" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-LawaBappy5"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
         <!-- <a href="" target="_blank" class="image-container-download unselectable" aria-label="Download image">
@@ -185,7 +156,8 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-Coolguy" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-Coolguy"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
         <!-- <a href="" target="_blank" class="image-container-download unselectable" aria-label="Download image">
@@ -196,10 +168,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-NightRose" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-NightRose"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1m1QQTYNt3pGqzn2c9dT5FTbqSwafg4YR" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1m1QQTYNt3pGqzn2c9dT5FTbqSwafg4YR" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/TheNightRoseButLessEpic.webp">
@@ -207,10 +181,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-TnTina" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-TnTina"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1V6dOU6wpUXgn9yEkPRzfK-KZwbNMf9ec" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1V6dOU6wpUXgn9yEkPRzfK-KZwbNMf9ec" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/TntinaRemixScene Effects.webp">
@@ -218,7 +194,8 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-bday2024" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-bday2024"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
         <!-- <a href="" target="_blank" class="image-container-download unselectable" aria-label="Download image">
@@ -229,10 +206,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-MarvelSlop" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-MarvelSlop"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1qzv8AfgD4wccwvvjxHTBIK4fdfJpImRs" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1qzv8AfgD4wccwvvjxHTBIK4fdfJpImRs" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/HopeVsDoom Finished.webp">
@@ -240,10 +219,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-CatgirlHope" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-CatgirlHope"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1OpvcTs2CrA-ZFocAN4siJxdDLxr2f6VU" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1OpvcTs2CrA-ZFocAN4siJxdDLxr2f6VU" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Brenden Hope.webp">
@@ -251,10 +232,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-Gwenpool" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-Gwenpool"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1QZl46VB6x4mbGPFYrXaMJl09P8DeRN9n" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1QZl46VB6x4mbGPFYrXaMJl09P8DeRN9n" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/ComicCover.webp">
@@ -262,10 +245,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-ValeriaTest" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-ValeriaTest"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1ZdVcCGMLDUAxfJH_6GD12UFt6DGNdCFb" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1ZdVcCGMLDUAxfJH_6GD12UFt6DGNdCFb" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/ValTest v2.webp">
@@ -273,10 +258,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-HopeOrb" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-HopeOrb"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1Dzx3uNHlFBTTfTbKtl6hISJTvWk5HuLw" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1Dzx3uNHlFBTTfTbKtl6hISJTvWk5HuLw" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/LookAtMyOrb.webp">
@@ -284,10 +271,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-WreckedBrite" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-WreckedBrite"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1MzMTLURFBPZUG0xW48q319PJwQUMPzg4" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1MzMTLURFBPZUG0xW48q319PJwQUMPzg4" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Ch5S3 v3.webp">
@@ -295,10 +284,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-Aphrodite" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-Aphrodite"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1LFau8lUyNjspejwMk6gwDk2PFr2n9NDQ" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1LFau8lUyNjspejwMk6gwDk2PFr2n9NDQ" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/AphroditeScene v2.webp">
@@ -306,10 +297,12 @@
       </div>
       <!---->
       <div class="image-containerNoEffect unselectable">
-        <button class="image-container-button like-button unselectable" data-post-id="post-Valeria1" aria-label="Like post">
+        <button class="image-container-button like-button unselectable" data-post-id="post-Valeria1"
+          aria-label="Like post">
           <span class="material-symbols-outlined">thumb_up</span>
         </button>
-        <a href="https://drive.google.com/uc?export=download&id=1XglRckW1CQTJtFB4Ik7OwxoNs4Pk6d3f" target="_blank" class="image-container-download unselectable" aria-label="Download image">
+        <a href="https://drive.google.com/uc?export=download&id=1XglRckW1CQTJtFB4Ik7OwxoNs4Pk6d3f" target="_blank"
+          class="image-container-download unselectable" aria-label="Download image">
           <span class="material-symbols-outlined">download</span>
         </a>
         <img class="thumbnail skeleton" src="img/artPortfolio/Valeria-SoloScene ALT.webp">
@@ -318,14 +311,32 @@
       <!---->
     </div>
   </main>
-</body>
+  <div class="circular-buttons-container">
+    <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
+      <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+  </div>
+  <script>
+    const video = document.getElementById("background-video");
 
-<script>
-  document.addEventListener("contextmenu", function (e) {
-    if (e.target.tagName === "IMG") {
-      e.preventDefault();
+    if (video) {
+      if (video.readyState >= 3) {
+        video.classList.add("loaded");
+      } else {
+        video.addEventListener("canplay", () => {
+          video.classList.add("loaded");
+        });
+      }
     }
-  });
-</script>
+  </script>
+
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
 
 </html>

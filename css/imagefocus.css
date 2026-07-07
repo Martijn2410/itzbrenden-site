@@ -16,7 +16,7 @@
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
@@ -32,7 +32,7 @@
   max-width: 90%;
   max-height: 90%;
   border-radius: 12px;
-    z-index: 10;
+  z-index: 100;
 }
 
 .imageClose {

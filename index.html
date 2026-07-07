@@ -4,120 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - itzbrenden.com</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home - ItzBrenden.com</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/themes.css">
-  <link rel="stylesheet" href="css/skeletonloading.css">
-  <link rel="shortcut icon" type="image/x-icon" href="img/LauraReborn6_PFP.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script type="text/javascript" src="js/app.js" defer></script>
-  <!-- <script type="text/javascript" src="js/darkmode.js" defer></script> -->
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
 </head>
 
 <body>
-  <nav id="sidebar">
-    <ul>
-      <li>
-        <span class="logo">ItzBrenden.com</span>
-        <button onclick=toggleSidebar() id="toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path
-              d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
-          </svg>
-        </button>
-      </li>
-      <li class="active">
-        <a href="index.html">
-          <i class='bx bxs-home-circle bx-sm'></i>
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="profile.html">
-          <i class='bx bx-user bx-sm'></i>
-          <span>About me</span>
-        </a>
-      </li>
-      <li>
-        <a href="portfolio.html">
-          <i class='bx bx-photo-album bx-sm'></i>
-          <span>Art Portfolio</span>
-        </a>
-      </li>
-      <li>
-        <button onclick=toggleSubMenu(this) class="dropdown-btn">
-          <i class='bx bx-archive bx-sm'></i>
-          <span>OC Content</span>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path
-              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
-          </svg>
-        </button>
-        <ul class="sub-menu">
-          <div>
-            <li><a href="stories.html">Stories</a></li>
-            <li><a href="characters.html">Characters</a></li>
-            <li><a href="extras.html">Extras</a></li>
-          </div>
-        </ul>
-      </li>
-      <li>
-        <a href="settings.html">
-          <i class='bx bx-cog bx-sm'></i>
-          <span>Settings</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- <div id="background"></div> -->
-  <main>
-    <div class="container-upper">
-      <div class="icon-container">
-        <img src="img/LauraReborn7_PFP.webp" alt="icon">
-      </div>
-      <div class="text-content">
-        <h2>ItzBrenden.com</h2>
-      </div>
-    </div>
-    <div class="container-sub">
-      <div class="text-content">
-        <h3>Latest Project:</h3>
-        <p>The newest adventure in the Fortnite: Omni-Chronicles storyline, Fortnite: Zero War!</p>
-      </div>
-      <div class="icon-container">
-        <a href="stories/stories-ZW.html"><img src="img/ocContent/storyBanners/StoryBanners_ZeroWar.webp"
-            alt="Server icon" /></a>
-      </div>
-    </div>
-    <div class="container-sub">
-      <div class="text-content">
-        <h3>Featured Artwork: </h3>
-        <p>Check out my latest art piece!</p>
-      </div>
-      <div class="icon-container">
-        <a href="portfolio.html"><img src="img/artPortfolio/OG5Remake16x9.webp" alt="Server icon" /></a>
-      </div>
-    </div>
-    <div class="center-container-wrapper">
-      <a class="social-button" target="_blank" href="https://twitter.com/ItzBrenden_" aria-label="Twitter">
-        <i class="fa-brands fa-twitter fa-2x fa-fw"></i>
-      </a>
-      <a class="social-button" target="_blank" href="https://www.instagram.com/itz.brenden/" aria-label="Instagram">
-        <i class="fa-brands fa-instagram fa-2x fa-fw"></i>
-      </a>
-      <a class="social-button" target="_blank" href="https://www.youtube.com/@ItzBrenden" aria-label="YouTube">
-        <i class="fa-brands fa-youtube fa-2x fa-fw"></i>
-      </a>
-      <a class="social-button" target="_blank" href="https://bsky.app/profile/itzbrenden.art" aria-label="Bluesky">
-        <i class="fa-brands fa-bluesky fa-2x fa-fw"></i>
-      </a>
-    </div>
+  <div id="background"></div>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background.webm" type="video/webm">
+  </video>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
+      <p class="logo-text">ItzBrenden.com</p>
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+      <a href="" style="--i:1;">Home</a>
+      <a href="about.html" style="--i:2;">About me</a>
+      <a href="portfolio.html" style="--i:3;">Art Portfolio</a>
+      <a href="projects.html" style="--i:4;">OC Projects</a>
+    </nav>
+  </header>
+
+  <main class="container-row">
+    <a href="about.html" class="container-home glass">
+      <img src="assets/Female_OC_PFP.png" alt="Female OC" class="container-image">
+      <div class="container-caption"><span>About me</span></div>
+    </a>
+
+    <a href="portfolio.html" class="container-home glass">
+      <img src="assets/OG5Remake16x9.webp" alt="OG5 Remake" class="container-image">
+      <div class="container-caption"><span>Art Portfolio</span></div>
+    </a>
+
+    <a href="projects.html" class="container-home glass">
+      <img src="assets/StoryBanners_AccidentZero.webp" alt="Accident Zero" class="container-image">
+      <div class="container-caption"><span>OC Projects</span></div>
+    </a>
   </main>
+
+<div class="circular-buttons-container">
+    <a href="https://x.com/ItzBrenden_" target="_blank" rel="noopener noreferrer" class="circular-button glass" aria-label="Twitter">
+      <i class='bxl bx-twitter button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+    
+    <a href="https://bsky.app/profile/itzbrenden.art" target="_blank" rel="noopener noreferrer" class="circular-button glass" aria-label="Bluesky">
+      <i class='bxl bx-bluesky button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+    
+    <a href="https://www.youtube.com/@ItzBrenden" target="_blank" rel="noopener noreferrer" class="circular-button glass" aria-label="YouTube">
+      <i class='bxl bx-youtube button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+</div>
+
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+      video.classList.add("loaded");
+    });
+  </script>
+  <script type="module">
+        const response = await fetch("/assets/rickroll3.gif");
+        const blob = await response.blob();
+
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const base64data = reader.result; // This is the full data:image/gif;base64,... string
+
+            console.log("%c ", `
+                background-image: url('${base64data}'); 
+                background-repeat: no-repeat; 
+                padding: 320px 500px;
+            `);
+        };
+        reader.readAsDataURL(blob);
+    </script>
 </body>
 
 </html>

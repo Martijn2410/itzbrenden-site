@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About me - ItzBrenden.com</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
+  <script type="text/javascript" src="js/portfolio-navbar.js" defer></script>
+</head>
+
+<body class="about-page">
+  <div id="background"></div>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background-mc.webm" type="video/webm">
+  </video>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
+      <p class="logo-text">About me</p>
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1;">Home</a>
+      <a href="" style="--i:2;">About me</a>
+      <a href="portfolio.html" style="--i:3;">Art Portfolio</a>
+      <a href="projects.html" style="--i:4;">OC Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container glass">
+      <div class="text-content">
+        <h1>About me</h1>
+        <p><a href="doro.html" class="doror">Hi</a> there! I'm Brenden and welcome to my site! I'm a 3D artist who
+          primarily focuses on creating fan art for the game
+          Fortnite and some OC (original character) related stuff like artwork, stories and perhaps even games in the
+          future! If you're curious about my work or have any questions, I've put together a small FAQ section that
+          answers some of the most commonly asked questions I receive.</p>
+      </div>
+      <div class="icon-container">
+        <img src="assets/Female_OC_PFP.png" alt="Server icon" />
+      </div>
+    </div>
+  </main>
+  <div class="circular-buttons-container">
+    <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
+      <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+  </div>
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+      video.classList.add("loaded");
+    });
+  </script>
+</body>
+
+</html>
