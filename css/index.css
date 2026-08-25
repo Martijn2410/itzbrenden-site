@@ -28,8 +28,6 @@ body {
     background-color: #191925;
 }
 
-/*The following is hidden because it's a good reference point to have for future webpages with similar styling*/
-
 #background {
     background-image: url(../assets/backgrounds/background.webp);
     /* background-color: #919191; */
@@ -51,7 +49,7 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    filter: blur(10px);
+    filter: blur(5px);
     transform: scale(1.1);
 
     opacity: 0;
@@ -188,12 +186,13 @@ main .container.glass .icon-container img {
     box-shadow: var(--shadow-strength);
     transform: scale(1.0);
     outline: 4px solid transparent;
-    outline-offset: 2px;
-    transition: outline-color 0.25s ease, outline-offset 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    outline-offset: 12px;
+    transition: outline-color 0.3s ease, outline-offset 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, transform 0.25s ease;
 
 }
 
-.container-image:hover {
+.container-home:hover .container-image,
+.container-home:focus-within .container-image {
     transform: scale(1.05);
 }
 
@@ -381,9 +380,9 @@ main .container.glass .icon-container img {
     align-items: center;
     justify-content: center;
     outline: 4px solid transparent;
-    outline-offset: 2px;
+    outline-offset: 12px;
     box-shadow: var(--shadow-strength);
-    transition: outline-color 0.25s ease, outline-offset 0.25s ease, box-shadow 0.25s ease;
+    transition: outline-color 0.3s ease, outline-offset 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
     text-decoration: none;
 }
 
@@ -450,6 +449,23 @@ main .container.glass .icon-container img {
         flex: 1 1 100%;
         width: 100%;
         height: 300px;
+        outline: none;
+        outline-offset: 0;
+        transition: none;
+    }
+
+    .container-home:hover {
+        outline-color: transparent;
+        outline-offset: 0;
+    }
+
+    .container-home:hover .container-image,
+    .container-home:focus-within .container-image {
+        transform: none;
+    }
+
+    .container-image {
+        transition: none;
     }
 
     .circular-button {
@@ -457,6 +473,14 @@ main .container.glass .icon-container img {
         height: 60px;
         justify-content: center;
         align-items: center;
+        outline: none;
+        outline-offset: 0;
+        transition: none;
+    }
+
+    .circular-button:hover {
+        outline-color: transparent;
+        outline-offset: 0;
     }
 
     .container-caption{
