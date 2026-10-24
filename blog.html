@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About me - ItzBrenden.com</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
+  <script type="text/javascript" src="js/nav-active.js" defer></script>
+  <script type="text/javascript" src="js/portfolio-navbar.js" defer></script>
+</head>
+
+<body class="about-page">
+  <div id="background"></div>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background-mc.webm" type="video/webm">
+  </video>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
+      <p class="logo-text">About me</p>
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1;">Home</a>
+      <a href="about.html" style="--i:2;">About me</a>
+      <a href="blog.html" style="--i:3;">Blog</a>
+      <a href="portfolio.html" style="--i:4;">Art Portfolio</a>
+      <a href="projects.html" style="--i:5;">Game Projects</a>
+      <a href="projects.html" style="--i:6;">OC Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container glass">
+      <div class="text-content">
+        <h1>Blog</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et felis vitae lacus elementum vestibulum sit amet vel nisl. Etiam in augue laoreet, dignissim ante ac, tincidunt est. Suspendisse elementum, eros eu pretium faucibus, lorem justo elementum quam, vitae venenatis risus quam vitae libero. Maecenas facilisis maximus nulla, scelerisque varius arcu tristique eu. Donec pellentesque dolor sit amet lobortis auctor. Nullam mattis interdum lacus. Nunc viverra sit amet elit quis feugiat. Morbi ac lacinia nisi, non ultricies dui. In in imperdiet nulla. Vivamus euismod arcu sed massa porttitor fermentum. Suspendisse fermentum risus eu rhoncus aliquet. Nulla egestas est sed sagittis efficitur. Aenean id pellentesque odio.</p>
+      </div>
+      <!-- <div class="icon-container">
+        <img src="assets/Female_OC_PFP.png" alt="Server icon" />
+      </div> -->
+    </div>
+  </main>
+  <div class="circular-buttons-container">
+    <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
+      <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
+    </a>
+  </div>
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+      video.classList.add("loaded");
+    });
+  </script>
+</body>
+
+</html>
