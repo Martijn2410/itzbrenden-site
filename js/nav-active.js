@@ -13,17 +13,24 @@ if (navbar) {
   const pageToHighlight = activePageMap[currentPage] || currentPage;
   const navLinks = navbar.querySelectorAll("a[href]");
 
-  navLinks.forEach((link) => {
-    link.classList.remove("nav-active");
-    link.removeAttribute("aria-current");
-
+  const matchingLinks = Array.from(navLinks).filter((link) => {
     const rawHref = link.getAttribute("href") || "";
     const resolvedPath = new URL(rawHref || window.location.href, window.location.href).pathname;
     const linkPage = resolvedPath.split("/").pop() || "index.html";
 
-    if (linkPage === pageToHighlight) {
-      link.classList.add("nav-active");
-      link.setAttribute("aria-current", "page");
-    }
+    return linkPage === pageToHighlight;
   });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("nav-active");
+    link.removeAttribute("aria-current");
+  });
+
+  // Game Projects and OC Projects currently share projects.html. The latter
+  // is the section represented by that page, so use the last matching link.
+  const activeLink = matchingLinks[matchingLinks.length - 1];
+  if (activeLink) {
+    activeLink.classList.add("nav-active");
+    activeLink.setAttribute("aria-current", "page");
+  }
 }
