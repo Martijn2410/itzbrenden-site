@@ -367,12 +367,19 @@ main .container.glass .icon-container img {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    left: 50%;
-    bottom: 2rem;
-    z-index: 20;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
-    transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 911px) {
+    .portfolio-home-button-container {
+        position: fixed;
+        left: 50%;
+        bottom: 2rem;
+        z-index: 20;
+        transform: translateX(-50%);
+    }
 }
 
 .circular-button {
