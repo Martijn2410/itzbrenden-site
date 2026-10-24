@@ -367,9 +367,12 @@ main .container.glass .icon-container img {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    z-index: 20;
     flex-wrap: wrap;
+    transform: translateX(-50%);
 }
 
 .circular-button {
@@ -497,6 +500,7 @@ main .container.glass .icon-container img {
         left: 0;
         right: 0;
         bottom: 0;
+        transform: none;
         width: 100%;
         margin: 0;
         padding: 0.65rem 0.5rem calc(1.5rem + env(safe-area-inset-bottom));

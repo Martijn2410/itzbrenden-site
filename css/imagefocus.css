@@ -14,7 +14,7 @@
 } */
 
 .lightbox {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 100;
   top: 0; left: 0;
@@ -26,13 +26,51 @@
   flex-direction: column;
   backdrop-filter: blur(10px); /* 🎯 This is the blur effect */
   -webkit-backdrop-filter: blur(6px); /* for Safari */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .lightbox-img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: calc(90% - 3rem);
   border-radius: 12px;
   z-index: 100;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox.is-open .lightbox-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lightbox-title {
+  position: absolute;
+  right: 5%;
+  bottom: 2rem;
+  left: 5%;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 1px 5px black;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox.is-open .lightbox-title {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .imageClose {
@@ -42,4 +80,12 @@
   font-size: 40px;
   color: white;
   cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox,
+  .lightbox-img,
+  .lightbox-title {
+    transition: none;
+  }
 }

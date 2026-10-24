@@ -59,6 +59,7 @@ main {
   columns: 3;
   column-gap: 1rem;
   margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
 .image-containerNoEffect {
