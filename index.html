@@ -37,25 +37,24 @@
       <a href="about.html" style="--i:2;">About me</a>
       <a href="blog.html" style="--i:3;">Blog</a>
       <a href="portfolio.html" style="--i:4;">Art Portfolio</a>
-      <a href="projects.html" style="--i:5;">Game Projects</a>
-      <a href="projects.html" style="--i:6;">OC Projects</a>
+      <a href="projects.html" style="--i:6;">Projects</a>
     </nav>
   </header>
 
   <main class="container-row">
     <a href="about.html" class="container-home glass">
-      <img src="assets/Female_OC_PFP.png" alt="Female OC" class="container-image">
+      <img src="assets/about-me.png" alt="About me" class="container-image">
       <div class="container-caption"><span>About me</span></div>
     </a>
 
     <a href="portfolio.html" class="container-home glass">
-      <img src="assets/OG5Remake16x9.webp" alt="OG5 Remake" class="container-image">
+      <img src="img/artPortfolio/OG5Remake - lower cromab.webp" alt="Art Portfolio" class="container-image">
       <div class="container-caption"><span>Art Portfolio</span></div>
     </a>
 
     <a href="projects.html" class="container-home glass">
-      <img src="assets/StoryBanners_AccidentZero.webp" alt="Accident Zero" class="container-image">
-      <div class="container-caption"><span>OC Projects</span></div>
+      <img src="img/StoryBanners_Legends.webp" alt="Projects" class="container-image">
+      <div class="container-caption"><span>Projects</span></div>
     </a>
   </main>
 
@@ -80,22 +79,6 @@
       video.classList.add("loaded");
     });
   </script>
-  <script type="module">
-        const response = await fetch("/assets/rickroll3.gif");
-        const blob = await response.blob();
-
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            const base64data = reader.result; // This is the full data:image/gif;base64,... string
-
-            console.log("%c ", `
-                background-image: url('${base64data}'); 
-                background-repeat: no-repeat; 
-                padding: 320px 500px;
-            `);
-        };
-        reader.readAsDataURL(blob);
-    </script>
 </body>
 
 </html>

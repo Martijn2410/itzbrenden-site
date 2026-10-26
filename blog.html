@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>About me - ItzBrenden.com</title>
+  <title>Blog - ItzBrenden.com</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/blog.css">
   <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
   <link rel="icon" href="./assets/LauraReborn7_PFP.webp" type="image/x-icon">
   <script type="text/javascript" src="js/nav-active.js" defer></script>
   <script type="text/javascript" src="js/portfolio-navbar.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body class="about-page">
@@ -24,13 +26,13 @@
   <header class="header">
     <a href="index.html" class="logo">
       <img src="assets/LauraReborn7_PFP.webp" alt="Laura Reborn" class="logo-icon">
-      <p class="logo-text">About me</p>
+      <p class="logo-text">Blog</p>
     </a>
 
     <input type="checkbox" id="check">
     <label for="check" class="icons">
-      <i class='bx  bx-menu' id="menu-icon"></i>
-      <i class='bx  bx-x' id="close-icon"></i>
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
     </label>
 
     <nav class="navbar">
@@ -38,30 +40,90 @@
       <a href="about.html" style="--i:2;">About me</a>
       <a href="blog.html" style="--i:3;">Blog</a>
       <a href="portfolio.html" style="--i:4;">Art Portfolio</a>
-      <a href="projects.html" style="--i:5;">Game Projects</a>
-      <a href="projects.html" style="--i:6;">OC Projects</a>
+      <a href="projects.html" style="--i:6;">Projects</a>
     </nav>
   </header>
 
   <main>
     <div class="container glass">
-      <div class="text-content">
-        <h1>Blog</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et felis vitae lacus elementum vestibulum sit amet vel nisl. Etiam in augue laoreet, dignissim ante ac, tincidunt est. Suspendisse elementum, eros eu pretium faucibus, lorem justo elementum quam, vitae venenatis risus quam vitae libero. Maecenas facilisis maximus nulla, scelerisque varius arcu tristique eu. Donec pellentesque dolor sit amet lobortis auctor. Nullam mattis interdum lacus. Nunc viverra sit amet elit quis feugiat. Morbi ac lacinia nisi, non ultricies dui. In in imperdiet nulla. Vivamus euismod arcu sed massa porttitor fermentum. Suspendisse fermentum risus eu rhoncus aliquet. Nulla egestas est sed sagittis efficitur. Aenean id pellentesque odio.</p>
-      </div>
-      <!-- <div class="icon-container">
-        <img src="assets/Female_OC_PFP.png" alt="Server icon" />
-      </div> -->
+      <article id="content" class="text-content blog-content">Loading content...</article>
     </div>
   </main>
-  <div class="circular-buttons-container">
-    <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
-      <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
-    </a>
-  </div>
+
+  <div id="home-button-container" class="circular-buttons-container"></div>
+
+  <script>
+    const contentEl = document.getElementById('content');
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('post');
+    const homeButtonContainer = document.getElementById('home-button-container');
+
+    if (!slug) {
+      homeButtonContainer.innerHTML = `
+        <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
+          <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
+        </a>
+      `;
+    }
+
+    if (slug) {
+      // 1. SINGLE POST VIEW: Render Markdown file
+      fetch(`posts/${slug}.md`)
+        .then(res => {
+          if (!res.ok) throw new Error('File not found');
+          return res.text();
+        })
+        .then(markdown => {
+          contentEl.innerHTML = `
+            <a href="blog.html" class="blog-back-link">← Back to all posts</a>
+            <div class="markdown-content">${marked.parse(markdown)}</div>
+          `;
+        })
+        .catch(() => {
+          contentEl.innerHTML = `
+            <h2>Post Not Found</h2>
+            <p>We couldn't locate that article.</p>
+            <a href="blog.html" class="blog-back-link">← Back to Blog</a>
+          `;
+        });
+    } else {
+      // 2. BLOG INDEX VIEW: Render list of posts from posts.json
+      fetch('posts/posts.json')
+        .then(res => {
+          if (!res.ok) throw new Error('Could not load posts directory');
+          return res.json();
+        })
+        .then(posts => {
+          if (!posts || posts.length === 0) {
+            contentEl.innerHTML = '<h2>Blog</h2><p>No posts published yet!</p>';
+            return;
+          }
+
+          posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+          let html = '<h1>Latest Blog Posts</h1><div class="post-list">';
+          posts.forEach(post => {
+            html += `
+              <div class="post-preview">
+                <h2>
+                  <a href="blog.html?post=${post.slug}">${post.title}</a>
+                </h2>
+                <small class="post-date">${post.date}</small>
+                <p>${post.summary}</p>
+              </div>
+            `;
+          });
+          html += '</div>';
+          contentEl.innerHTML = html;
+        })
+        .catch(err => {
+          contentEl.innerHTML = '<h2>Blog</h2><p>Failed to load articles. Make sure <code>posts/posts.json</code> exists.</p>';
+        });
+    }
+  </script>
+
   <script>
     const video = document.getElementById("background-video");
-
     video.addEventListener("canplay", () => {
       video.classList.add("loaded");
     });

@@ -80,7 +80,13 @@ h1 {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+h3 {
+    font-size: 20px;
     color: white;
     text-shadow: 0px 0px 5px black;
 }
@@ -149,9 +155,12 @@ main .container.glass .icon-container {
 }
 
 main .container.glass .icon-container img {
-    width: clamp(170px, 30rem, 30rem);
+    width: 30rem;
     max-width: 100%;
+    aspect-ratio: 1 / 1;
     height: auto;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: var(--border-radius);
     corner-shape: squircle;
 }
@@ -272,8 +281,8 @@ main .container.glass .icon-container img {
     backdrop-filter: blur(var(--blur-amount));
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     mask: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.99) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0) 100%);
-    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+
 }
 
 .container-caption span {
@@ -493,7 +502,7 @@ main .container.glass .icon-container img {
         outline-offset: 0;
     }
 
-    .container-caption{
+    .container-caption {
         padding: .8rem 5rem;
     }
 

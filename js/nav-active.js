@@ -7,7 +7,9 @@ if (navbar) {
   // Subpages under OC Projects should keep the OC Projects tab highlighted.
   const activePageMap = {
     "ocstories.html": "projects.html",
-    "sidestories.html": "projects.html"
+    "sidestories.html": "projects.html",
+    "oc-projects.html": "projects.html",
+    "game-projects.html": "projects.html"
   };
 
   const pageToHighlight = activePageMap[currentPage] || currentPage;
