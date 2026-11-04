@@ -1,7 +1,7 @@
 const header = document.querySelector(".portfolio-page .header, .about-page .header");
-const artItems = document.querySelectorAll(".portfolio-page .image-containerNoEffect, .about-page .container");
 
-if (header && artItems.length > 0) {
+// We removed the static artItems query and length check here
+if (header) {
   const desktopQuery = window.matchMedia("(min-width: 911px)");
 
   const updateHeaderState = () => {
@@ -10,10 +10,18 @@ if (header && artItems.length > 0) {
       return;
     }
 
-    const headerBottom = header.getBoundingClientRect().bottom;
+    // Move the query INSIDE the update function so it finds dynamically added images
+    const artItems = document.querySelectorAll(".portfolio-page .image-containerNoEffect, .about-page .container");
+    
+    if (artItems.length === 0) return;
+
+    const headerRect = header.getBoundingClientRect();
+    const headerBottom = headerRect.bottom;
+    const headerTop = headerRect.top;
+
     const isAnyItemBehindHeader = Array.from(artItems).some((item) => {
       const rect = item.getBoundingClientRect();
-      return rect.top < headerBottom && rect.bottom > header.getBoundingClientRect().top;
+      return rect.top < headerBottom && rect.bottom > headerTop;
     });
 
     header.classList.toggle("is-overlapping", isAnyItemBehindHeader);

@@ -1,10 +1,11 @@
-  const STORAGE_KEY = "likedPosts";
+const STORAGE_KEY = "likedPosts";
+
+function initLikes() {
   const likedPosts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
-  document.querySelectorAll(".like-button").forEach(button => {
+  document.querySelectorAll(".like-button").forEach((button) => {
     const postId = button.dataset.postId;
 
-    // Restore saved state
     if (likedPosts[postId]) {
       button.classList.add("liked");
     }
@@ -15,3 +16,4 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(likedPosts));
     });
   });
+}

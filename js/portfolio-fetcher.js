@@ -3,7 +3,11 @@ const GITHUB_USERNAME = "Martijn2410";
 const GITHUB_REPO = "itzbrenden-site";
 const FOLDER_PATH = "img/artPortfolio";
 
-const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FOLDER_PATH}`;
+// Add your specific publishing branch name here (e.g., "gh-pages")
+const BRANCH_NAME = "modern-design-v2";
+
+// Append ?ref=BRANCH_NAME to tell GitHub exactly which branch to look at
+const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FOLDER_PATH}?ref=${BRANCH_NAME}`;
 
 // Cache settings: 60 minutes in milliseconds
 const CACHE_DURATION = 60 * 60 * 1000; 
@@ -51,23 +55,24 @@ document.addEventListener("DOMContentLoaded", () => {
 function processAndRenderFiles(files, container) {
   // Filter for standard image formats
   const validExtensions = [".png", ".jpg", ".jpeg", ".webp", ".gif"];
-  const images = files.filter((file) =>
-    validExtensions.some((ext) => file.name.toLowerCase().endsWith(ext))
-  );
+  
+  const images = files
+    .filter((file) => validExtensions.some((ext) => file.name.toLowerCase().endsWith(ext)))
+    .reverse(); // <-- Add this line to flip the order
 
   renderGallery(images, container);
 
-  // Re-initialize like state and lightbox clicks once DOM elements exist[cite: 14, 15]
+  // Re-initialize like state and lightbox clicks once DOM elements exist
   if (typeof initLikes === "function") initLikes();
   if (typeof initLightbox === "function") initLightbox();
 }
 
 function cleanTitle(filename) {
-  // Removes extension, replaces dashes/underscores with spaces
   return filename
-    .replace(/\.[^/.]+$/, "")
-    .replace(/[-_]+/g, " ")
-    .trim();
+    .replace(/\.[^/.]+$/, "") // 1. Removes the file extension
+    .replace(/^\[.*?\]/, "")  // 2. Removes any [Text] at the very beginning
+    .replace(/[-_]+/g, " ")   // 3. Replaces dashes/underscores with spaces
+    .trim();                  // 4. Cleans up edge spaces
 }
 
 function renderGallery(images, container) {
