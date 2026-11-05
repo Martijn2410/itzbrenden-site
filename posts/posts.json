@@ -10,5 +10,11 @@
     "title": "A simple blogging feature!",
     "date": "2026-10-26",
     "summary": "A simple blogging feature for my website, allowing me to post updates and news."
+  },
+  {
+    "slug": "post_2026-11-04",
+    "title": "Portfolio page rewrite",
+    "date": "2026-11-04",
+    "summary": "A rewrite of the backend of the portfolio page to make it more efficient and easier to maintain."
   }
 ]

@@ -50,6 +50,7 @@
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     object-fit: cover;
     display: block;
 }
