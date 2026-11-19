@@ -121,6 +121,7 @@ p {
     margin: 200px auto;
     justify-content: center;
     align-items: center;
+    text-align: left;
     border-radius: var(--border-radius);
     corner-shape: squircle;
     box-shadow: var(--shadow-strength);
@@ -360,6 +361,89 @@ main .container.glass .icon-container img {
     }
 }
 
+.about-page main .faq-container {
+    display: block;
+    margin-top: 2rem;
+}
+
+.faq-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.faq-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.faq-list details {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1rem;
+    corner-shape: squircle;
+    background: rgba(0, 0, 0, 0.12);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.faq-list details[open] {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.32);
+}
+
+.faq-list summary {
+    padding: 1rem 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px black;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: '+';
+    float: right;
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.faq-list details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-list summary:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+    border-radius: 1rem;
+}
+
+.faq-answer {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.35s ease, opacity 0.2s ease;
+}
+
+.faq-list details[open] .faq-answer {
+    opacity: 1;
+}
+
+.faq-list details:not(.faq-animated)[open] .faq-answer {
+    height: auto;
+}
+
+.faq-list details.is-closing .faq-answer {
+    opacity: 0;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 0 1.25rem 1.1rem;
+    line-height: 1.6;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
     .container-home,
@@ -367,6 +451,10 @@ main .container.glass .icon-container img {
         opacity: 1;
         transform: none;
         animation: none;
+        transition: none;
+    }
+
+    .faq-answer {
         transition: none;
     }
 }
@@ -451,11 +539,15 @@ main .container.glass .icon-container img {
 
     main .container.glass .text-content {
         max-width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     main .container.glass .icon-container {
         justify-content: center;
+    }
+
+    .about-page main .faq-container {
+        margin-top: 1.5rem;
     }
 
     .container-row,

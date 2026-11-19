@@ -46,24 +46,133 @@
     <div class="container glass">
       <div class="text-content">
         <h1>About me</h1>
-        <p><a href="doro.html" class="doror">Hi</a> there! I'm Brenden and welcome to my site! I'm a 3D artist who
-          primarily focuses on creating fan art for the game
-          Fortnite and some OC (original character) related stuff like artwork, stories and perhaps even games in the
-          future! If you're curious about my work or have any questions, I've put together a small FAQ section that
-          answers some of the most commonly asked questions I receive.</p>
+        <p>Hi there! I'm Brenden and welcome to my site! I'm a 3D artist who primarily focuses on creating fan art for
+          the game Fortnite and some OC (original character) related stuff like artwork, stories and perhaps even games
+          in the future! If you're curious about my work or have any questions, I've put together a small FAQ section
+          that answers some of the most commonly asked questions I receive.</p>
       </div>
       <div class="icon-container">
         <img src="assets/about-me.png" alt="Server icon" />
       </div>
     </div>
+    <section class="container glass faq-container" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Do you got a Support a Creator code?</summary>
+          <div class="faq-answer">
+            <p>I do! My creator code is "ItzBrenden".</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you do commissions?</summary>
+          <div class="faq-answer">
+            <p>Due to personal reasons, such as time restraints and me not wanting to disappoint people with my work, I
+              unfortunately don't do commissions of any kind. I do make some stuff for friends but this is usually because
+              I
+              choose to make it myself and not because they paid for it.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I repost your artwork?</summary>
+          <div class="faq-answer">
+            <p>No, I don't allow people to repost my stuff unless specific permission is granted or stated otherwise.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I make use your artwork for personal use?</summary>
+          <div class="faq-answer">
+            <p>Yes, of course! You're free to use my artwork for personal stuff like wallpapers, profile pictures,
+              banners, etc. As long as there's no monetary gains, I don't mind. You can directly download some of my
+              artwork
+              from the portfolio page!</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I make (NSFW) artwork of your characters?</summary>
+          <div class="faq-answer">
+            <p>For SFW art, of course! You generally don't have to even ask me, so if you have something cool in mind, go
+              ahead! The only thing I ask is to keep the characters in mind for proper character representation.
+              When it comes to NSFW artwork, however, I generally don't allow this unless you've gotten my personal
+              permission to do so. Please contact me first through Twitter/X, Instagram or Discord if you are considering
+              it.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I get a version of your art without the watermark?</summary>
+          <div class="faq-answer">
+            <p>No. I add the watermark for a reason after all. Unless it's a piece specifically made for someone else,
+              you'll have to deal with that watermark.</p>
+          </div>
+        </details>
+      </div>
+    </section>
   </main>
   <div class="circular-buttons-container">
     <a href="index.html" rel="noopener noreferrer" class="circular-button glass" aria-label="Back to Home">
       <i class='bx bx-home button-icon-placeholder' aria-hidden="true"></i>
     </a>
-    
+
   </div>
   <script>
+    const faqItems = document.querySelectorAll(".faq-list details");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    faqItems.forEach((faq) => {
+      const summary = faq.querySelector("summary");
+      const answer = faq.querySelector(".faq-answer");
+
+      faq.classList.add("faq-animated");
+
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        if (faq.dataset.animating === "true") {
+          return;
+        }
+
+        if (reduceMotion.matches) {
+          faq.open = !faq.open;
+          answer.style.height = faq.open ? "auto" : "0px";
+          return;
+        }
+
+        faq.dataset.animating = "true";
+        const isOpening = !faq.open;
+
+        if (isOpening) {
+          faq.open = true;
+          answer.style.height = "0px";
+          requestAnimationFrame(() => {
+            answer.style.height = `${answer.scrollHeight}px`;
+          });
+        } else {
+          answer.style.height = `${answer.scrollHeight}px`;
+          requestAnimationFrame(() => {
+            faq.classList.add("is-closing");
+            answer.style.height = "0px";
+          });
+        }
+
+        const handleTransitionEnd = (transitionEvent) => {
+          if (transitionEvent.propertyName !== "height") {
+            return;
+          }
+
+          if (!isOpening) {
+            faq.open = false;
+            faq.classList.remove("is-closing");
+          } else {
+            answer.style.height = "auto";
+          }
+          faq.dataset.animating = "false";
+          answer.removeEventListener("transitionend", handleTransitionEnd);
+        };
+
+        answer.addEventListener("transitionend", handleTransitionEnd);
+      });
+    });
+
     const video = document.getElementById("background-video");
 
     video.addEventListener("canplay", () => {
